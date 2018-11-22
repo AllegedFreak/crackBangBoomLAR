@@ -1,0 +1,95 @@
+.contact-principal{
+  background-image: url("../images/patterns/pattern-2.svg");
+  background-repeat: repeat;
+  font-family: 'Bangers';
+  color: #000;
+  padding: 20px;
+}
+
+.contact-principal .contact-error{
+  color:red;
+}
+
+.contact-form{
+  border-radius: 20px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.titulo-contact h1{
+  margin: 16px 0 0 0;
+  text-align: center;
+  color: #E52328;
+  letter-spacing: 1px;
+}
+
+.titulo-contact p{
+  text-align: center;
+}
+
+.contact-form input{
+  font-size: 15px;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.contact-form textarea{
+  font-size: 15px;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.contact-form button{
+  width: 100%;
+  margin-bottom: 5px;
+  background-color: #E52328;
+  border: none;
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+	border-radius: 5px;
+}
+.contact-form button:hover{
+	background-color:#42A9E0;
+	color: white;
+}
+
+.error {
+  color: red;
+  clear: left;
+}
+
+
+
+
+@media (min-width:1024px) {
+
+  .contact-form {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .titulo-contact h1{
+    font-size: 50px;
+  }
+  .titulo-contact p{
+    font-size: 20px;
+  }
+
+  .contact-form button{
+    width: 49%;
+    margin-bottom: 0px;
+  }
+
+}

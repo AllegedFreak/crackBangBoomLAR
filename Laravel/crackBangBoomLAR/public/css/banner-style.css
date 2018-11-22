@@ -1,0 +1,191 @@
+.no-padding {
+  padding: 0;
+}
+
+.banner {
+  height: 400px;
+  margin-bottom: 15px;
+  padding: 0;
+  background-image: url("../images/patterns/pattern-1.svg");
+  background-repeat: repeat;
+}
+
+.fullbanner{
+  position: relative;
+  width: 100%;
+  height: 400px;
+  padding: 0;
+  background-color: black;
+}
+
+.image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  opacity: 0.8;
+  overflow: hidden;
+}
+
+.image img{
+  position: relative;
+  width: 130%;
+  mask-size: contain;
+  left:50%;
+  transform: translateX(-50%);
+}
+
+.text {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black, 0 0 3px #000;
+  top: 46%;
+  color: white;
+  font-weight: bold;
+  /* background-color: black; */
+}
+
+.fullbanner a{
+  position: absolute;
+  text-decoration: none;
+  color: white;
+  top: 50%;
+  right:92%;
+  transform: translateY(-50%);
+  opacity: 0.7;
+}
+
+.fullbanner a:hover {
+  opacity: 0.9;
+}
+
+.forth{
+  left:92%;
+}
+
+.forth img {
+  width: 40px;
+}
+
+.back img {
+  width: 40px;
+}
+
+.button {
+  position: absolute;
+  top: 92%;
+  left: 95%;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black, 0 0 3px #000;
+}
+
+.dots {
+  position: absolute;
+  width: 100%;
+  top: 90%;
+  text-align: center;
+}
+
+.dot {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.dot img{
+  width: 15px;
+}
+
+.dot:hover {
+  opacity: 0.9;
+}
+
+.selected {
+  visibility: visible;
+  opacity: 1.0;
+  transition: visibility 1s, opacity 1s;
+}
+
+.selected img{
+  width: 120%;
+  transition: width 10s;
+}
+
+.active {
+  opacity: 0.9;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+
+
+@media (max-width:425px) {
+
+  .banner {
+    height: 250px;
+  }
+
+  .fullbanner{
+    height: 250px;
+  }
+
+  .image img{
+    width: 150%;
+  }
+
+  .selected img{
+    width: 140%;
+    transition: width 10s;
+  }
+
+  .dots {
+    top: 85%;
+  }
+
+  .button {
+    top: 92%;
+  }
+
+  .forth img {
+    width: 30px;
+  }
+
+  .back img {
+    width: 30px;
+  }
+
+}
+
+
+
+/* @media (min-width:768px) {
+
+  .arrow-right {
+    opacity: 0.5;
+  }
+
+  .arrow-left {
+    opacity: 0.5;
+    transform:rotate(180deg);
+  }
+
+  .arrow-right:hover {
+    transition: opacity 1s;
+    opacity: 0.7;
+  }
+
+  .arrow-left:hover {
+    transition: opacity 1s;
+    opacity: 0.7;
+  }
+
+}
+
+@media (min-width:1024px) {
+
+  .banner {
+    height: 400px;
+  }
+  .slide {
+    height: 360px;
+  }
+} */

@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Bangers');
+
+* {
+  font-family: 'Roboto', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3 {
+  font-family:'Bangers';
+}
+
+body {
+  background-color: #151515;
+}
+
+ul {
+  margin: 0;
+}
+
+a {
+  color: #b35900;
+}
+
+a:hover {
+  transition: color 0.5s;
+  color: #e67300;
+  text-decoration: none;
+}
+
+p {
+  color: #7a7a7a;
+}
+
+.nav1 {
+  background-color: #222;
+  justify-content: space-between;
+  padding: 20px 20px 14px 20px;
+  border-bottom: 1px solid #333;
+}
+
+#nav-menu {
+  height: 20px;
+  width: 20px;
+}
+
+#nav-menu img {
+  width: 100%;
+  transform: translateY(2px);
+}
+
+#nav-logo {
+  width: 65px;
+}
+
+#nav-logo img {
+  width: 100%;
+  transform: translateY(-3px);
+}
+
+
+#nav-search {
+  height: 20px;
+  width: 20px;
+}
+
+#nav-search img {
+  width: 100%;
+  transform: translateY(2px);
+}
+
+.nav2 {
+  background-color: #222;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid #000;
+}
+
+.btn-nav {
+  height: 50px;
+  font-size: 18px;
+  text-transform: uppercase;
+  line-height: 50px;
+  padding: 0 5px 0 5px;
+}
+
+.banner {
+  background-color: gray;
+  height: 300px;
+}
+
+.section {
+  padding-top: 10px;
+  background-color: #0d0d0d;
+}
+
+.name-section {
+  height: 50px;
+  font-size: 18px;
+  text-align: left;
+  line-height: 50px;
+  padding: 0 5px 0 15px;
+}
+
+.comic-section {
+  height: auto;
+  padding: 0;
+}
+
+.allitems {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.item {
+  background-color: #3a3a3a;
+  width: 157px;
+  height: 157px;
+  padding: 5px 50px 5px 5px;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.title {
+  text-align: left;
+}
+
+.descrip {
+  text-align: left;
+}
+
+.genre {
+  text-align: left;
+}
+
+.group-b {
+  padding-top: 10px;
+}
+
+footer {
+  padding: 10px 0 20px 0;
+  text-align: center;
+}
+
+.socialmedia ul{
+  list-style: none;
+  line-height: 50px;
+  margin-bottom: 0;
+}
+
+.socialmedia li{
+  font-size: 26px;
+  display: inline;
+  padding: 0 10px 0 10px;
+}
+
+.bottom-menu {
+  margin-bottom: 10px;
+}
+
+.bigger {
+  width: 320px;
+}

@@ -1,0 +1,49 @@
+.faq-content {
+  border-radius: 20px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.faq-content .titulosPrin {
+	color: #E52328;
+	background-color: #ffd800;
+	font-size: 16px;
+	text-align: center;
+	margin-top: 25px;
+	padding: 3px 0 3px 0;
+	text-transform: uppercase;
+}
+
+.preguntas{
+	background-color: #e6e6e6;
+	margin-bottom: 10px;
+	padding: 15px 20px 10px 20px;
+	color: #595959;
+	display: block;
+	cursor: pointer;
+}
+
+.preguntas h2 {
+	color: #42A9E0;
+	font-weight: bold;
+}
+
+.titulo-contact p {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+@media (min-width:1024px) {
+
+  .faq-content {
+		margin: 25px;
+  }
+
+  .align-content {
+    display: flex;
+    justify-content: center;
+  }
+
+}

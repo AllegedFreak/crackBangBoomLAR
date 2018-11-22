@@ -1,0 +1,111 @@
+.user-profile {
+  background-color: white;
+  width: 100%;
+}
+
+.img-profile{
+  display: flex;
+  justify-content: center;
+  background-color: white;
+}
+
+.img-profile img{
+  width: 210px;
+  height: 210px;
+  margin: 20px;
+  border-radius: 10px;
+  border: 1px solid #999;
+}
+
+.name-user h1{
+  text-align: center;
+  color: #E52328;
+  font-size: 32px;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.email-user {
+  text-align: center;
+  color: #333333;
+}
+
+.user-actions {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 5px 0 20px 0;
+}
+
+.user-actions a {
+  padding: 0px 10px;
+  margin: 0 2px 0 2px;
+  border: 1px solid #999;
+  border-radius: 5px;
+}
+
+.info-purchase{
+}
+
+.info-purchase h3 {
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px #111111;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0;
+  padding: 10px 0 ;
+}
+
+.info-purchase p {
+  color: white;
+  text-align: center;
+  font-size: 13px;
+}
+
+.info-purchase.item.info {
+  height: auto;
+}
+
+.info-bought {
+  background-color: #42A9E0;
+}
+
+.info-list {
+  background-color: #E52328;
+}
+
+.info-history {
+  background-color: #ffd800;
+}
+
+.info-bought, .info-list, .info-history {
+  width: 100%;
+  height: auto;
+  margin-bottom: 0px;
+  padding: 5px 0;
+  cursor: pointer;
+}
+
+@media (min-width:1024px) {
+
+  .user-profile {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .info-purchase h3 {
+    text-align: left;
+    padding-left: 15px;
+  }
+
+  .column-A {
+    width: 25%;
+    margin-right: 30px;
+  }
+  .column-B {
+    width: 75%;
+  }
+
+}
