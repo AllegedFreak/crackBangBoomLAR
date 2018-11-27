@@ -14,7 +14,7 @@ Route::get('/register', function () {
     return view('register');
 });
 
-Route::post('/register', ['as' => '/register', 'uses' => 'user@save_user']);
+Route::post('/register', ['as' => '/register', 'uses' => 'UserController@save_user']);
 
 
 Route::get('/faq', function () {
