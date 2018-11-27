@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class authenticator extends Controller
+class AuthenticatorController extends Controller
 {
-    //recibe un email y lo guarda en una $_SESSION
+  //recibe un email y lo guarda en una $_SESSION
   public function loguear($email){
   $_SESSION['logueado'] = $email;
   //Guarda en indice logueado el mail recibido
@@ -33,11 +33,11 @@ class authenticator extends Controller
   }
 
   public function usuarioLogueado($base){
-  if($this->estoyLogueado()){
-      $base->traerEmail($_SESSION['logueado']);
-      return $loguado;
-  } else {
-    return NULL;
-  }
+    if($this->estoyLogueado()){
+        $base->traerEmail($_SESSION['logueado']);
+        return $loguado;
+    } else {
+      return NULL;
+    }
   }
 }
