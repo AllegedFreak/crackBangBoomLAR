@@ -10,9 +10,19 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/register', function () {
+    return view('register');
+});
+
+Route::post('/register', ['as' => '/register', 'uses' => 'user@save_user']);
+
+
+Route::get('/faq', function () {
+    return view('faq');
+});
 
 Route::get('/prueba', function () {
-    return view('prueba');
+    return view('contact');
 });
 Route::get('/', function () {
     return view('index');

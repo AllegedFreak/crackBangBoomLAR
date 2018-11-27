@@ -10,10 +10,10 @@
       <li><a href="#"><span class="ion-social-pinterest"></span></a></li>
     </ul>
   </div>
-<!--
+
   <div class="bottom-menu col-12">
     <a href="sobre-nosotros.php">Sobre nosotros</a> | <a href="faq.php">FAQs</a> | <a href="contact.php">Contacto</a> | <a href="logout.php">Logout</a> | <a href="login.php">Ingresar</a>
-  </div> -->
+  </div>
 
   <div class="signature col-12">
     © Grupo N°4

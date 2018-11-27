@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <title>Crack Bang Boom!</title>
-    <link href="css/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/bootstrap/css/bootstrap.css" rel="stylesheet">
     <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
-    <link rel="stylesheet" href="css/main-style.css">
-    <link rel="stylesheet" href="css/banner-style.css">
+    <link rel="stylesheet" href="/css/main-style.css">
+    <link rel="stylesheet" href="/css/banner-style.css">
   </head>
 
   <body>
@@ -17,13 +17,13 @@
     <div id="desktop-container">
 
       <!--HEADER-->
-      <?php include('header.blade.php'); ?>
+      @include('includes.header')
 
       <!--BANNER-->
       <div class="container-fluid ">
         <div class="row banner">
           <div class="col-12 no-padding">
-            <?php include('banner.blade.php'); ?>
+            @yield('script-banner')
           </div>
         </div>
       </div>
@@ -40,7 +40,7 @@
             <div class="allitems">
 
               <!--LISTADO DE COMICS-->
-              <?php include('layout/item-comic-new.php'); ?>
+              @include('includes.item-comic-new')
 
             </div>
           </div>
@@ -55,7 +55,7 @@
             <div class="allitems">
 
               <!--LISTADO DE COMICS-->
-              <?php include('layout/item-comic-mangas.php'); ?>
+            @include('includes.item-comic-mangas')
 
             </div>
           </div>
@@ -74,7 +74,7 @@
                 <div class="allitems">
 
                   <!--LISTADO DE COMICS-->
-                  <?php include('layout/item-comic-marvel.php'); ?>
+                  @include('includes.item-comic-marvel')
 
 
                 </div>
@@ -92,7 +92,7 @@
                 <div class="allitems">
 
                   <!--LISTADO DE COMICS-->
-                  <?php include('layout/item-comic-dc.php'); ?>
+                  @include('includes.item-comic-dc')
 
                 </div>
               </div>
@@ -106,9 +106,9 @@
     </div>
 
     <!--FOOTER-->
-    <!-- <div class="container-fluid">
-      <?php include('layout/footer.php'); ?>
-    </div> -->
+    <div class="container-fluid">
+      @include('includes.footer')
+    </div>
 
   </body>
 
