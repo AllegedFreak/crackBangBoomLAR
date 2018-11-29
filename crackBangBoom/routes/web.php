@@ -24,6 +24,5 @@ Route::get('/faq', function () {
 Route::get('/prueba', function () {
     return view('contact');
 });
-Route::get('/', function () {
-    return view('index');
-});
+
+Route::get('/', 'IndexController@cargarIndex');

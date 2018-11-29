@@ -1,4 +1,4 @@
-@include('comics')
+{{-- @include('comics') --}}
 
 @php
 foreach ($boughts as $bought) {

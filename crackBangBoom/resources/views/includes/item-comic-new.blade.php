@@ -1,4 +1,4 @@
-@include('comics')
+{{-- @include('includes.comics') --}}
 
 @php
 foreach ($novedades as $novedad) {
