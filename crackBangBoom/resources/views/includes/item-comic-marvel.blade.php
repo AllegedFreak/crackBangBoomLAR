@@ -1,4 +1,5 @@
-@include('comics')
+{{-- @include('comics') --}}
+
 @php foreach ($charactersMarvel as $characterMarvel) { @endphp
 
 <div class="item">

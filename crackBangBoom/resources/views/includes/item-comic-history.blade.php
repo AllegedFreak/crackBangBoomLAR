@@ -1,4 +1,4 @@
-@include('comics')
+{{-- @include('comics') --}}
 
 @php
 foreach ($histories as $history) {
