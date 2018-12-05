@@ -25,4 +25,10 @@ Route::get('/prueba', function () {
     return view('contact');
 });
 
+// Route::get('/comics')->group( function () {
+//     Route::get('create', ComicController@create);
+//     Route::get('edit', ComicController@edit);
+//     Route::get('delete', ComicController@delete);
+// });
+
 Route::get('/', 'IndexController@cargarIndex');
