@@ -6,7 +6,7 @@
     <div id="nav-menu" class="">
       <div class="menu">
         <label for="menu-check" id="menu-toggle">
-          <img class="img-menu" src="images/icons/menu.png" alt="menu">
+          <img class="img-menu" src="/images/icons/menu.png" alt="menu">
         </label>
       </div>
     </div>
@@ -33,7 +33,7 @@
 <!-- ***** lupa ***** -->
     <div id="nav-search" class="">
       <a href="#" style="display:none;">
-        <img src="images/icons/search.png" alt="search">
+        <img src="/images/icons/search.png" alt="search">
       </a>
     </div>
 

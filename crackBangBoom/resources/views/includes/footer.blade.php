@@ -12,7 +12,7 @@
   </div>
 
   <div class="bottom-menu col-12">
-    <a href="sobre-nosotros.php">Sobre nosotros</a> | <a href="faq.php">FAQs</a> | <a href="contact.php">Contacto</a> | <a href="logout.php">Logout</a> | <a href="login.php">Ingresar</a>
+    <a href="/sobre-nosotros">Sobre nosotros</a> | <a href="/preguntas-frecuentes">FAQs</a> | <a href="/contacto">Contacto</a> | <a href="/usuario/deslogueo">Logout</a> | <a href="/usuario/logueo">Ingresar</a>
   </div>
 
   <div class="signature col-12">
