@@ -27,3 +27,7 @@ Route::get('/prueba', function () {
 });
 
 Route::get('/', 'IndexController@cargarIndex');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
