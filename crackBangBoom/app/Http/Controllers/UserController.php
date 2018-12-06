@@ -8,7 +8,7 @@ class UserController extends Controller
 {
   public function save_user(Request $request)
   {
-  $userDB = UserDB::create($request->all());
-  return redirect()->route('/');
+    $userDB = UserDB::create($request->all());
+    return redirect()->route('/');
   }
 }
