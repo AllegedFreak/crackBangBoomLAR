@@ -12,6 +12,14 @@
     <link rel="stylesheet" href="/css/banner-style.css">
     <link rel="stylesheet" href="/css/profile-style.css">
     <link rel="stylesheet" href="/css/items-style-profile.css">
+    <link rel="stylesheet" href="/css/contact-style.css">
+    <link rel="stylesheet" href="/css/faq-style.css">
+    <link rel="stylesheet" href="/css/item-style-1.css">
+    <link rel="stylesheet" href="/css/item-style-2.css">
+    <link rel="stylesheet" href="/css/item-style-profile.css">
+    <link rel="stylesheet" href="/perfil.css">
+    <link rel="stylesheet" href="/show-item.css">
+    <link rel="stylesheet" href="/styleforms.css">
   </head>
 
   <body>
