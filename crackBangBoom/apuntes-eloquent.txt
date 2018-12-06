@@ -1,0 +1,7 @@
+Eloquent:
+
+Metodo estático, Create:
+
+$usuario = User::create(['nombre'=> 'Francisco']);
+
+Para poder utilizar este método debemos recordar colocar el atributo que en este caso es "nombre" como $fillable dentro del modelo.

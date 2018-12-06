@@ -10,6 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Route::get('/register', function () {
     return view('register');
 });
@@ -24,11 +25,5 @@ Route::get('/faq', function () {
 Route::get('/prueba', function () {
     return view('contact');
 });
-
-// Route::get('/comics')->group( function () {
-//     Route::get('create', ComicController@create);
-//     Route::get('edit', ComicController@edit);
-//     Route::get('delete', ComicController@delete);
-// });
 
 Route::get('/', 'IndexController@cargarIndex');
