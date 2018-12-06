@@ -27,21 +27,21 @@ Route::prefix('/comics')->group( function () {
 
     // Route::get('crear', 'ComicController@create');
     Route::get('/crear', function () {
-        return 'Soy Crear';
+        return 'Soy Crear <a href="/">Inicio</a>';
     });
 
     // Route::get('editar', 'ComicController@edit');
     Route::get('/editar', function () {
-        return 'Soy Editar';
+        return 'Soy Editar <a href="/">Inicio</a>';
     });
 
     // Route::get('eliminar', 'ComicController@delete');
     Route::get('/eliminar', function () {
-        return 'Soy Eliminar';
+        return 'Soy Eliminar <a href="/">Inicio</a>';
     });
 
     Route::get('/', function () {
-        return 'Soy Comics';
+        return 'Soy Comics <a href="/">Inicio</a>';
     });
 
 });
@@ -67,17 +67,17 @@ Route::prefix('/usuario')->name('usuario.')->group( function() {
 
 Route::get('/contacto', function () {
     // return view('contact');
-    return 'Soy Contacto';
+    return 'Soy Contacto <a href="/">Inicio</a>';
 });
 
 Route::get('/preguntas-frecuentes', function () {
     // return view('faq');
-    return 'Soy FAQ';
+    return 'Soy FAQ <a href="/">Inicio</a>';
 });
 
 Route::get('/sobre-nosotros',  function () {
     // return view('sobre-nosotros');
-    return 'Soy Sobre Nosotros';
+    return 'Soy Sobre Nosotros <a href="/">Inicio</a>';
 });
 
 Route::get('/', 'IndexController@cargarIndex');
