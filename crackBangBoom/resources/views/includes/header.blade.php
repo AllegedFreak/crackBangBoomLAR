@@ -14,7 +14,7 @@
 
 <!-- ***** logo ***** -->
     <div id="nav-logo" class="">
-      <a href="index.php"><img src="/images/icons/icon-cbb-02.svg" alt="CBB"></a>
+      <a href="/"><img src="/images/icons/icon-cbb-02.svg" alt="CBB"></a>
     </div>
 
     <!-- ***** checkbox ***** -->
@@ -22,11 +22,11 @@
     <!-- ***** nav ***** -->
     <nav class="navigation">
       <ul class="navigation-ul">
-          <li><a href="sobre-nosotros.php">Sobre Nosotros</a></li>
-          <li><a href="faq.php">FAQs</a></li>
-          <li><a href="contact.php">Contacto</a></li>
-          <li><a href="login.php">Ingresar</a></li>
-          <li><a href="user_profile.php">Mi Perfil</a></li>
+          <li><a href="/sobre-nosotros">Sobre Nosotros</a></li>
+          <li><a href="/preguntas-frecuentes">FAQs</a></li>
+          <li><a href="/contacto">Contacto</a></li>
+          <li><a href="/usuario/logueo">Ingresar</a></li>
+          <li><a href="/usuario/perfil">Mi Perfil</a></li>
         </ul>
     </nav>
 
