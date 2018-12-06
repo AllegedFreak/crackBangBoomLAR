@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
     <link rel="stylesheet" href="css/main-style.css">
     <link rel="stylesheet" href="css/profile-style.css">
-      <link rel="stylesheet" href="css/items-style-profile.css">
+    <link rel="stylesheet" href="css/items-style-profile.css">
   </head>
 
   <body>

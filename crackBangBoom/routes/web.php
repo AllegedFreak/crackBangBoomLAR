@@ -50,18 +50,16 @@ Route::prefix('/comics')->group( function () {
 Route::prefix('/usuario')->name('usuario.')->group( function() {
 
     Route::get('/registro', function () {
-        // return view('register');
-        return 'Soy Registro';
+        return view('register');
     });
 
     Route::get('/logueo', function () {
-        // return view('login');
-        return 'Soy Logueo';
+        return view('login');
     });
 
     Route::get('/perfil', function () {
-        // return view('user_profile');
-        return 'Soy Perfil';
+        return view('user_profile');
+        // return 'Soy Perfil';
     });
 
 });

@@ -14,7 +14,7 @@
 
 <!-- ***** logo ***** -->
     <div id="nav-logo" class="">
-      <a href="index.php"><img src="images/icons/icon-cbb-02.svg" alt="CBB"></a>
+      <a href="index.php"><img src="/images/icons/icon-cbb-02.svg" alt="CBB"></a>
     </div>
 
     <!-- ***** checkbox ***** -->

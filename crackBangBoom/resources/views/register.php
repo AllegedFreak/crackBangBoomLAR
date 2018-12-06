@@ -1,53 +1,53 @@
 <?php
 
-require("autoload.php");
-//require("models/Validator_registrar.php");
-
-//Creamos las variables de los valores temporales ante eventuales errores
-$tempNombreCompleto = '';
-$tempUserName = '';
-$tempCountry = '';
-$tempEmail = '';
-
-$errores = [];
-
-
-if($_POST) {
-		$errores = $validator->validarDatos($_POST, $base);
-
-		if(!isset($errores['NombreCompleto'])) {$tempNombreCompleto = $_POST["NombreCompleto"];
-		}
-
-		if(!isset($errores['NombreUsuario'])) {$tempUserName = $_POST["NombreUsuario"];
-		}
-
-		if(!isset($errores['PaisNacimiento'])) {$tempCountry = $_POST["PaisNacimiento"];
-		}
-
-		if(!isset($errores['Email'])) {$tempEmail = $_POST['Email'];
-		}
-
-	if(count($errores)==0){
-
-		$usuario = new User ($_POST['NombreCompleto'],$_POST['NombreUsuario'], $_POST['Email'],$_POST['PaisNacimiento'],$_POST['Password'],$_POST['Avatar']);
-
-		$usuario = $base->guardarUsuario($usuario);
-
-	}
-
-}
-//var_dump($errores);
-var_dump($_POST['NombreCompleto']);
-
-	if(isset($_FILES["Avatar"]) && $_FILES["Avatar"]["error"] === 0 ) {
-		$ex = pathinfo($_FILES["Avatar"]["name"], PATHINFO_EXTENSION);
-			if( $ex == "jpg" || $ex == "png" || $ex == "svg"){
-				if (!is_dir('avatars') ) mkdir('avatars');
-			move_uploaded_file($_FILES['Avatar']['tmp_name'], 'avatars/'.$_POST['NombreUsuario'].'.'.$ex);
-		} else {
-				$errores["Avatar"] = 'Boom! Los formatos válidos son .jpg, .png y .svg';
-				}
-	}
+// require("autoload.php");
+// //require("models/Validator_registrar.php");
+//
+// //Creamos las variables de los valores temporales ante eventuales errores
+// $tempNombreCompleto = '';
+// $tempUserName = '';
+// $tempCountry = '';
+// $tempEmail = '';
+//
+// $errores = [];
+//
+//
+// if($_POST) {
+// 		$errores = $validator->validarDatos($_POST, $base);
+//
+// 		if(!isset($errores['NombreCompleto'])) {$tempNombreCompleto = $_POST["NombreCompleto"];
+// 		}
+//
+// 		if(!isset($errores['NombreUsuario'])) {$tempUserName = $_POST["NombreUsuario"];
+// 		}
+//
+// 		if(!isset($errores['PaisNacimiento'])) {$tempCountry = $_POST["PaisNacimiento"];
+// 		}
+//
+// 		if(!isset($errores['Email'])) {$tempEmail = $_POST['Email'];
+// 		}
+//
+// 	if(count($errores)==0){
+//
+// 		$usuario = new User ($_POST['NombreCompleto'],$_POST['NombreUsuario'], $_POST['Email'],$_POST['PaisNacimiento'],$_POST['Password'],$_POST['Avatar']);
+//
+// 		$usuario = $base->guardarUsuario($usuario);
+//
+// 	}
+//
+// }
+// //var_dump($errores);
+// var_dump($_POST['NombreCompleto']);
+//
+// 	if(isset($_FILES["Avatar"]) && $_FILES["Avatar"]["error"] === 0 ) {
+// 		$ex = pathinfo($_FILES["Avatar"]["name"], PATHINFO_EXTENSION);
+// 			if( $ex == "jpg" || $ex == "png" || $ex == "svg"){
+// 				if (!is_dir('avatars') ) mkdir('avatars');
+// 			move_uploaded_file($_FILES['Avatar']['tmp_name'], 'avatars/'.$_POST['NombreUsuario'].'.'.$ex);
+// 		} else {
+// 				$errores["Avatar"] = 'Boom! Los formatos válidos son .jpg, .png y .svg';
+// 				}
+// 	}
 
 ?>
 
