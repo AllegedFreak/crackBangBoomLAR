@@ -80,8 +80,10 @@ Route::get('/sobre-nosotros',  function () {
     return 'Soy Sobre Nosotros <a href="/">Inicio</a>';
 });
 
-Route::get('/', 'IndexController@cargarIndex');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::get('/', 'IndexController@cargarIndex');
