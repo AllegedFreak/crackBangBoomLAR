@@ -22,10 +22,13 @@
 
   function changeTheme() {
     var theme = document.querySelector(".mainTheme");
+    var boton = document.querySelector(".changetheme-btn");
     if ( theme.getAttribute("href") == "/css/main-style.css" ) {
       theme.setAttribute("href", "/css/main-style-dark.css");
+      boton.innerText = 'Modo Claro';
     } else {
       theme.setAttribute("href", "/css/main-style.css");
+      boton.innerText = 'Modo Oscuro';
     }
   }
 
