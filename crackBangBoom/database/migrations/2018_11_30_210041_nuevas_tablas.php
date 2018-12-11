@@ -71,6 +71,5 @@ class NuevasTablas extends Migration
          Schema::drop('genres');
          Schema::drop('authors');
          Schema::drop('characters');
-
      }
 }
