@@ -8,9 +8,9 @@ class Comic extends Model
 {
     protected $guarded = [];
 
-    //public function categories()
-    //{
-    //    return $this->belongsToMany(Category::class);
-        //, 'category_product', 'product_id', 'category_id'
-    //}
+    public function categories()
+    {
+        return $this->belongsToMany(Universe::class);
+
+    }
 }
