@@ -17,6 +17,7 @@ return array(
     'App\\Http\\Controllers\\ComicController' => $baseDir . '/app/Http/Controllers/ComicController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'App\\Http\\Controllers\\DataBaseController' => $baseDir . '/app/Http/Controllers/DataBaseController.php',
+    'App\\Http\\Controllers\\HomeController' => $baseDir . '/app/Http/Controllers/HomeController.php',
     'App\\Http\\Controllers\\IndexController' => $baseDir . '/app/Http/Controllers/IndexController.php',
     'App\\Http\\Controllers\\UserController' => $baseDir . '/app/Http/Controllers/UserController.php',
     'App\\Http\\Controllers\\ValidatorController' => $baseDir . '/app/Http/Controllers/ValidatorController.php',

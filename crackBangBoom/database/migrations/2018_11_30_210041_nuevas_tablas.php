@@ -15,31 +15,48 @@ class NuevasTablas extends Migration
      {
          Schema::create('comics', function (Blueprint $table) {
              $table->increments('id');
+
              $table->string('title', 200);
              $table->string('illustrator', 25);
              $table->string('universe', 25);
-             $table->string('edition', 25);
              $table->string('description', 500);
              $table->string('img_cover', 180);
+             // $table->string('img_preview', 180);
+             $table->string('pdf', 180);
+
              $table->integer('author_id');
              $table->integer('genre_id');
+             $table->integer('character_id');
              $table->integer('rating');
+             $table->integer('edition');
+
              $table->float('price', 5, 2);
+
              $table->date('release_date');
+
              $table->timestamps(); //no borrar
          });
 
          Schema::create('genres', function (Blueprint $table) {
              $table->increments('genre_id');
              $table->string('name', 200);
+
              $table->timestamps(); //no borrar
          });
 
-         // Schema::create('authors', function (Blueprint $table) {
-         //     $table->increments('author_id');
-         //     $table->string('name', 200);
-         //     $table->timestamps(); //no borrar
-         // });
+         Schema::create('authors', function (Blueprint $table) {
+             $table->increments('author_id');
+             $table->string('name', 200);
+
+             $table->timestamps(); //no borrar
+         });
+
+         Schema::create('characters', function (Blueprint $table) {
+             $table->increments('character_id');
+             $table->string('name', 200);
+
+             $table->timestamps(); //no borrar
+         });
 
      }
 
@@ -52,5 +69,8 @@ class NuevasTablas extends Migration
      {
          Schema::drop('comics');
          Schema::drop('genres');
+         Schema::drop('authors');
+         Schema::drop('characters');
+
      }
 }

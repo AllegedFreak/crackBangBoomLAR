@@ -23,7 +23,7 @@ class NuestrosUsuarios extends Migration
         // $table->rememberToken();
         // $table->timestamps();
 
-        $table->increments('id_user');
+        $table->increments('id');
         $table->string('fullname', 200);
         $table->string('username', 25)->unique();
         $table->string('email', 191)->unique();
@@ -31,6 +31,8 @@ class NuestrosUsuarios extends Migration
         $table->string('password', 200);
         $table->string('country_birth', 50);
         $table->date('date_birth');
+        $table->boolean('admin')->default(0);
+
         $table->timestamps(); //no borrar
       });
     }
