@@ -8,7 +8,7 @@ class Comic extends Model
 {
     protected $guarded = [];
 
-    public function categories()
+    public function universes()
     {
         return $this->belongsToMany(Universe::class);
 
