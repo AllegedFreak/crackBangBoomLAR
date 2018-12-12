@@ -22,13 +22,12 @@
 //     return view('contact');
 // });
 
-
+            //HAY QUE SUMAR ->middleware('auth')
+//Route::prefix('/comics')->middleware('auth')->group( function () {
 Route::prefix('/comics')->group( function () {
 
     // Route::get('crear', 'ComicController@create');
-    Route::get('/crear', function () {
-        return 'Soy Crear <a href="/">Inicio</a>';
-    });
+    Route::get('/crear', 'ComicController@create');
 
     // Route::get('editar', 'ComicController@edit');
     Route::get('/editar', function () {
