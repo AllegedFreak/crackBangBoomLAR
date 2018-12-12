@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Comic;
 use Illuminate\Http\Request;
 
 class UniverseController extends Controller
@@ -43,7 +44,7 @@ class UniverseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Universe $universe)
     {
         //
     }
@@ -54,7 +55,7 @@ class UniverseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Universe $universe)
     {
         //
     }
@@ -66,7 +67,7 @@ class UniverseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Universe $universe)
     {
         //
     }
@@ -77,7 +78,7 @@ class UniverseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Universe $universe)
     {
         //
     }
