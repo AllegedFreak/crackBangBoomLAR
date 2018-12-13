@@ -6,6 +6,7 @@
     position: fixed;
     bottom: 20px;
     right: 20px;
+    /* border: 1px solid white; */
   }
   .changetheme-btn:hover{
     color:white;
@@ -14,13 +15,7 @@
 </style>
 
 <button type="button" class="changetheme-btn" name="button" onclick="changeTheme()">
-<?php
-if ( $_COOKIE['theme'] == 'dark') {
-  echo ' Modo Claro ';
-} else {
-  echo ' Modo Oscuro ';
-}
-?>
+<?php echo ( $_COOKIE['theme'] == 'dark') ? " Modo Claro " : " Modo Oscuro ";?>
 </button>
 
 <script>
