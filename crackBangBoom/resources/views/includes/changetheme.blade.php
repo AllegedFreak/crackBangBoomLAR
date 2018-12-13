@@ -1,13 +1,27 @@
 <style >
   .changetheme-btn{
-    color:blue;
+    color:white;
+    width: 120px;
+    padding: 5px;
     position: fixed;
     bottom: 20px;
     right: 20px;
   }
+  .changetheme-btn:hover{
+    color:white;
+    background-color: #E52328;
+  }
 </style>
 
-<button type="button" class="changetheme-btn" name="button" onclick="changeTheme()">Modo Oscuro</button>
+<button type="button" class="changetheme-btn" name="button" onclick="changeTheme()">
+<?php
+if ( $_COOKIE['theme'] == 'dark') {
+  echo ' Modo Claro ';
+} else {
+  echo ' Modo Oscuro ';
+}
+?>
+</button>
 
 <script>
 
@@ -21,37 +35,42 @@
     }
   }
 
-  //var cookieTheme;
-
   function checkTheme() {
-    var theme = document.querySelector(".mainTheme");
+
+    var theme = document.querySelector(".themes");
+    var boton = document.querySelector(".changetheme-btn");
     var cookieTheme = getCookie('theme');
+
     //console.log(cookieTheme);
     if ( cookieTheme == "dark" ) {
-      theme.setAttribute("href", "/css/main-style-dark.css");
-      boton.innerText = 'Modo Claro';
+      theme.setAttribute("href", "/css/theme-dark.css");
+      boton.innerText = ' Modo Claro ';
       document.cookie = "theme=dark";
     } else {
-      theme.setAttribute("href", "/css/main-style.css");
-      boton.innerText = 'Modo Oscuro';
+      theme.setAttribute("href", "/css/theme-light.css");
+      boton.innerText = ' Modo Oscuro ';
       document.cookie = "theme=light";
     }
+
   }
 
-  checkTheme();
+  checkTheme(); //Verifica cuál tema está activo
 
   function changeTheme() {
-    var theme = document.querySelector(".mainTheme");
+
+    var theme = document.querySelector(".themes");
     var boton = document.querySelector(".changetheme-btn");
-    if ( theme.getAttribute("href") == "/css/main-style.css" ) {
-      theme.setAttribute("href", "/css/main-style-dark.css");
-      boton.innerText = 'Modo Claro';
+
+    if ( theme.getAttribute("href") == "/css/theme-light.css" ) {
+      theme.setAttribute("href", "/css/theme-dark.css");
+      boton.innerText = ' Modo Claro ';
       document.cookie = "theme=dark";
     } else {
-      theme.setAttribute("href", "/css/main-style.css");
-      boton.innerText = 'Modo Oscuro';
+      theme.setAttribute("href", "/css/theme-light.css");
+      boton.innerText = ' Modo Oscuro ';
       document.cookie = "theme=light";
     }
+
   }
 
 </script>

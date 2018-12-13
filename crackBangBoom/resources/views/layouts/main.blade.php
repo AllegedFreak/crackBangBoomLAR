@@ -7,22 +7,19 @@
     <title>Crack Bang Boom!</title>
     <link href="/css/bootstrap/css/bootstrap.css" rel="stylesheet">
     <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="/css/main-style.css" class="mainTheme"> -->
-    <link rel="stylesheet" href="/css/main-style.css" class="mainTheme">
-    <!-- <link rel="stylesheet" href="/css/main-style-dark.css" class="mainTheme"> -->
+
+    <link rel="stylesheet" href="/css/main-style.css">
+    <link rel="stylesheet" href="/css/theme-light.css" class="themes">
 
     <link rel="stylesheet" href="/css/banner-style.css">
     <link rel="stylesheet" href="/css/profile-style.css">
     <link rel="stylesheet" href="/css/items-style-profile.css">
     <link rel="stylesheet" href="/css/contact-style.css">
     <link rel="stylesheet" href="/css/faq-style.css">
-    <link rel="stylesheet" href="/css/item-style-1.css">
-    <link rel="stylesheet" href="/css/item-style-2.css">
-    <link rel="stylesheet" href="/css/item-style-profile.css">
-    <link rel="stylesheet" href="/perfil.css">
-    <link rel="stylesheet" href="/show-item.css">
-    <link rel="stylesheet" href="/styleforms.css">
+    <!-- <link rel="stylesheet" href="/css/item-style-profile.css"> -->
+    <link rel="stylesheet" href="/css/perfil.css">
+    <link rel="stylesheet" href="/css/show-item.css">
+    <link rel="stylesheet" href="/css/styleforms.css">
   </head>
 
   <body>
