@@ -64,6 +64,15 @@ Route::prefix('/usuario')->name('usuario.')->group( function() {
 });
 
 
+
+
+//Logueo por Google
+Route::get('login/google', 'Auth\LoginController@redirectToProviderGoogle');
+Route::get('login/google/callback', 'Auth\LoginController@handleProviderCallbackGoogle');
+
+
+
+
 Route::get('/contacto', function () {
     // return view('contact');
     return 'Soy Contacto <a href="/">Inicio</a>';
@@ -83,6 +92,5 @@ Route::get('/sobre-nosotros',  function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
 
 Route::get('/', 'IndexController@cargarIndex');
