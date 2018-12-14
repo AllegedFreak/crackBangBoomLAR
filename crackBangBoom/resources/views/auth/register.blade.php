@@ -18,8 +18,10 @@
                               <div class="col-md-6">
                                   <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
 
+                                  <span class="invalid-feedback name" role="alert"></span>
+
                                   @if ($errors->has('name'))
-                                      <span class="invalid-feedback" role="alert">
+                                      <span class="invalid-feedback name" role="alert">
                                           <strong>{{ $errors->first('name') }}</strong>
                                       </span>
                                   @endif
@@ -32,8 +34,10 @@
                               <div class="col-md-6">
                                   <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
 
+                                  <span class="invalid-feedback email" role="alert"></span>
+
                                   @if ($errors->has('email'))
-                                      <span class="invalid-feedback" role="alert">
+                                      <span class="invalid-feedback email" role="alert">
                                           <strong>{{ $errors->first('email') }}</strong>
                                       </span>
                                   @endif
@@ -46,8 +50,10 @@
                               <div class="col-md-6">
                                   <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
 
+                                  <span class="invalid-feedback pass" role="alert"></span>
+
                                   @if ($errors->has('password'))
-                                      <span class="invalid-feedback" role="alert">
+                                      <span class="invalid-feedback pass" role="alert">
                                           <strong>{{ $errors->first('password') }}</strong>
                                       </span>
                                   @endif
@@ -59,6 +65,9 @@
 
                               <div class="col-md-6">
                                   <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+
+                                  <span class="invalid-feedback passconf" role="alert"></span>
+
                               </div>
                           </div>
 
@@ -76,4 +85,7 @@
       </div>
   </div>
 </div>
+
+<script src="/js/validformsontime.js"></script>
+
 @endsection
