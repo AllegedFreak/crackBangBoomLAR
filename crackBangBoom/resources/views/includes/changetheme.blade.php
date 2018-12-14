@@ -15,7 +15,7 @@
 </style>
 
 <button type="button" class="changetheme-btn" name="button" onclick="changeTheme()">
-<?php echo ( $_COOKIE['theme'] == 'dark') ? " Modo Claro " : " Modo Oscuro ";?>
+<?php echo ( $_COOKIE["theme"] == "dark") ? " Modo Claro " : " Modo Oscuro ";?>
 </button>
 
 <script>
