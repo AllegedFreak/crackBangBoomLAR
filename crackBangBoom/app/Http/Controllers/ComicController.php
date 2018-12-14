@@ -53,9 +53,9 @@ class ComicController extends Controller
           'release_date' => 'nullable',
         ]);
 
-        if( ($request->file('image')) ){
-          $path = $request->file('image')->store('comics');
-        }
+        // if( ($request->file('image')) ){
+        //   $path = $request->file('image')->store('comics');
+        // }
 
         $comic = Comic::create([
           'title' => $request->input('title'),
@@ -75,6 +75,7 @@ class ComicController extends Controller
           $comic->universes()->attach($universe);
         }
 
+        $comic->save();
     }
 
     /**

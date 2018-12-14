@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit72864b0d821b1aca71decdfd230bd372
+class ComposerStaticInitc0c41f6b6a5ddfaee148e7581b914bdf
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -450,7 +450,7 @@ class ComposerStaticInit72864b0d821b1aca71decdfd230bd372
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
         'App\\Http\\Controllers\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerificationController.php',
         'App\\Http\\Controllers\\AuthenticatorController' => __DIR__ . '/../..' . '/app/Http/Controllers/AuthenticatorController.php',
-        'App\\Http\\Controllers\\ComicController' => __DIR__ . '/../..' . '/app/Http/Controllers/ComicController(MC-old).php',
+        'App\\Http\\Controllers\\ComicController' => __DIR__ . '/../..' . '/app/Http/Controllers/ComicController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\DataBaseController' => __DIR__ . '/../..' . '/app/Http/Controllers/DataBaseController.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
@@ -4323,11 +4323,11 @@ class ComposerStaticInit72864b0d821b1aca71decdfd230bd372
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit72864b0d821b1aca71decdfd230bd372::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit72864b0d821b1aca71decdfd230bd372::$prefixDirsPsr4;
-            $loader->fallbackDirsPsr4 = ComposerStaticInit72864b0d821b1aca71decdfd230bd372::$fallbackDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit72864b0d821b1aca71decdfd230bd372::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit72864b0d821b1aca71decdfd230bd372::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitc0c41f6b6a5ddfaee148e7581b914bdf::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitc0c41f6b6a5ddfaee148e7581b914bdf::$prefixDirsPsr4;
+            $loader->fallbackDirsPsr4 = ComposerStaticInitc0c41f6b6a5ddfaee148e7581b914bdf::$fallbackDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitc0c41f6b6a5ddfaee148e7581b914bdf::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInitc0c41f6b6a5ddfaee148e7581b914bdf::$classMap;
 
         }, null, ClassLoader::class);
     }
