@@ -85,8 +85,8 @@ Route::get('/preguntas-frecuentes', function () {
 });
 
 Route::get('/sobre-nosotros',  function () {
-    // return view('sobre-nosotros');
-    return 'Soy Sobre Nosotros <a href="/">Inicio</a>';
+    return view('sobre-nosotros');
+    //return 'Soy Sobre Nosotros <a href="/">Inicio</a>';
 });
 
 

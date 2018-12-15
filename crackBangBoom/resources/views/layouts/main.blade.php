@@ -1,3 +1,17 @@
+<?php
+
+  // if ( !isset( $_COOKIE["theme"] ) ) {
+  //   $cookie_name = "theme";
+  //   $cookie_value = "light";
+  //   setcookie($cookie_name, $cookie_value, 0, "/");
+  // } else {
+  //   $cookie_name = "theme";
+  //   $cookie_value = $_COOKIE["theme"];
+  //   setcookie($cookie_name, $cookie_value, 0, "/");
+  // }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -38,6 +52,7 @@
       </div>
 
       @include('includes.changetheme')
+
 
   </body>
 

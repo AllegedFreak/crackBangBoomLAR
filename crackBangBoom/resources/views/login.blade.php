@@ -76,5 +76,7 @@
 </div>
 
 <script src="/js/validformsontime.js"></script>
+<script src="/js/validformssubmit.js"></script>
+
 
 @endsection
