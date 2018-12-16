@@ -45,10 +45,10 @@
                             <div class="col-md-6">
                                 @foreach ($universes as $universe)
                                     <input id="{{$universe->id}}"  type="checkbox" name="universes[]" value="{{$universe->id}}">
-                                    <label for="{{$universe->id}}">{{$universe->name}}</label>
+                                    <label for="{{$universe->id}}">{{$universe->universe}}</label>
                                 @endforeach
 
-                                @if ($errors->has('categories'))
+                                @if ($errors->has('universes'))
                                         <strong>{{ $errors->first('universes') }}</strong>
                                 @endif
                             </div>
@@ -144,7 +144,7 @@
 
                             <div class="col-md-6">
 
-                                <textarea name="release_date" id="release_date" type="date" class="form-control{{ $errors->has('release_date') ? ' is-invalid' : '' }}">{{ old('description')}}</textarea>
+                                <input name="release_date" id="release_date" type="date" class="form-control{{ $errors->has('release_date') ? ' is-invalid' : '' }}">{{ old('description')}}</textarea>
 
                                 @if ($errors->has('release_date'))
                                     <span class="invalid-feedback" role="alert">

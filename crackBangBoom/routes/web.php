@@ -27,8 +27,8 @@
 Route::prefix('/comics')->group( function () {
 
     // Route::get('crear', 'ComicController@create');
-    Route::get('/crear', 'ComicController@create');
-    Route::post('/crear', 'ComicController@store');
+    Route::get('/create', 'ComicController@create');
+    Route::post('/create', 'ComicController@store');
 
     // Route::get('editar', 'ComicController@edit');
     Route::get('/editar', function () {

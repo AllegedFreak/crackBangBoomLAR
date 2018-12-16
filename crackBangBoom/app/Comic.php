@@ -6,11 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Comic extends Model
 {
-    protected $guarded = [];
+  protected $guarded = [];
 
-    public function universes()
-    {
-        return $this->belongsToMany(Universe::class);
+  public function universes()
+  {
+      return $this->belongsToMany(Universe::class);
 
-    }
+  }
 }

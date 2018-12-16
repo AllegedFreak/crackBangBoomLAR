@@ -13,12 +13,19 @@ class Universos extends Migration
      */
     public function up()
     {
-      Schema::create('universes', function (Blueprint $table) {
-        $table->increments('id');
-        $table->string('universe', 200);
+        Schema::create('universes', function (Blueprint $table) {
+          $table->increments('id');
+          $table->string('universe', 100);
+          $table->timestamps();
+        });
 
-        $table->timestamps(); //no borrar
-      });
+        \DB::table('universes')->insert([
+          [ 'universe'=>'Marvel'],
+          [ 'universe'=>'DC'],
+          [ 'universe'=>'Manga'],
+          [ 'universe'=>'Otro'],
+        ]);
+
     }
 
     /**

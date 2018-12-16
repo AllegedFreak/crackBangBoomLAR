@@ -16,30 +16,26 @@ class NuevasTablas extends Migration
          Schema::create('comics', function (Blueprint $table) {
              $table->increments('id');
 
-             $table->string('title', 200);
-             $table->string('illustrator', 25);
-             $table->string('universe', 25);
-             $table->string('description', 500);
-             $table->string('img_cover', 180);
+             $table->string('title', 200)->nullable();
+             $table->string('illustrator', 25)->nullable();
+             $table->string('description', 500)->nullable();
+             $table->string('img_cover', 180)->nullable();
              // $table->string('img_preview', 180);
-             $table->string('pdf', 180);
+             $table->string('pdf', 180)->nullable();
+             $table->integer('rating')->nullable();
+             $table->integer('edition')->nullable();
 
-             $table->integer('author_id');
-             $table->integer('genre_id');
-             $table->integer('character_id');
-             $table->integer('rating');
-             $table->integer('edition');
+             $table->float('price', 5, 2)->nullable();
 
-             $table->float('price', 5, 2);
-
-             $table->date('release_date');
+             $table->date('release_date')->nullable();
 
              $table->timestamps(); //no borrar
          });
 
-         Schema::create('genres', function (Blueprint $table) {
-             $table->increments('genre_id');
-             $table->string('name', 200);
+         Schema::create('comic_universe', function (Blueprint $table) {
+             $table->increments('id');
+             $table->string('universe_id');
+             $table->string('comic_id');
 
              $table->timestamps(); //no borrar
          });
