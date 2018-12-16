@@ -66,7 +66,7 @@
                               <div class="col-md-6">
                                   <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
 
-                                  <span class="invalid-feedback password-confirm" role="alert"></span>
+                                  <span class="invalid-feedback passconf" role="alert"></span>
 
                               </div>
                           </div>
