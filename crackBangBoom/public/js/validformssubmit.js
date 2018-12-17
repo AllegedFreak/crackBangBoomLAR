@@ -1,9 +1,11 @@
 function validateForm() {
 
-  console.log('validateForm inició');
+  //console.log('validateForm inició');
 
-  //var inputName = form.querySelector('input#name');
-  var inputName = document.forms["validform"]["name"].value;
+  var form = document.querySelector('#validform');
+
+  var inputName = form.querySelector('input#name');
+  //var inputName = document.forms["validform"]["name"];
   if ( inputName != null ) {
     var textErrorName = document.querySelector('span.name');
     inputName.onblur = function(){
@@ -37,8 +39,8 @@ function validateForm() {
   }
 
 
-  //var inputEmail = form.querySelector('input#email');
-  var inputEmail = document.forms["validform"]["email"].value;
+  var inputEmail = form.querySelector('input#email');
+  //var inputEmail = document.forms["validform"]["email"];
   if ( inputEmail != null ) {
     var textErrorEmail = document.querySelector('span.email');
     inputEmail.onblur = function(){
@@ -64,10 +66,8 @@ function validateForm() {
     };
   }
 
-  //var validPassword = false;
-
-  //var inputPass = form.querySelector('input#password');
-  var inputPass = document.forms["validform"]["password"].value;
+  var inputPass = form.querySelector('input#password');
+  //var inputPass = document.forms["validform"]["password"];
   if ( inputPass != null ) {
     var textErrorPass = document.querySelector('span.password');
     inputPass.onblur = function(){
@@ -77,7 +77,6 @@ function validateForm() {
         textErrorPass.innerText = "Este campo es requerido.";
         textErrorPass.style.display = "block";
         return false;
-        //var validPassword = false;
         //console.log('false'.validPassword);
         event.preventDefault();
       } else if ( input.length < 3 ) {
@@ -85,7 +84,6 @@ function validateForm() {
         textErrorPass.innerText = "Este campo debe tener al menos 3 caracteres.";
         textErrorPass.style.display = "block";
         return false;
-        //var validPassword = false;
         //console.log('false'.validPassword);
         event.preventDefault();
       }
@@ -93,7 +91,6 @@ function validateForm() {
         inputPass.classList.remove('is-invalid');
         textErrorPass.style.display = "none";
         //return true;
-        //var validPassword = true;
         //console.log('true'.validPassword);
         event.preventDefault();
       };
@@ -101,12 +98,11 @@ function validateForm() {
   };
 
 
-  //var inputPassConf = form.querySelector('input#password-confirm');
-  var inputPassConf = document.forms["validform"]["password_confirmation"].value;
+  var inputPassConf = form.querySelector('input#password-confirm');
+  //var inputPassConf = document.forms["validform"]["password_confirmation"];
   if ( inputPassConf != null ) {
     var textErrorPassConf = document.querySelector('span.passconf');
     inputPassConf.onblur = function(){
-      //console.log(validPassword);
       var input = inputPassConf.value.trim();
       var preinput = form.querySelector('input#password').value.trim();
       if (input == '') {
@@ -137,6 +133,32 @@ function validateForm() {
         };
     };
   } else {
-    console.log('TODO ESTA PERFECTO');
+    //console.log('TODO ESTA OK');
   }
 }
+
+//THIS WORKS
+// <!DOCTYPE html>
+// <html>
+// <head>
+// <script>
+// function validateForm() {
+//   //var x = document.forms["myFo.valuerm"]["fname"].value;
+//   var form = document.querySelector('#validform');
+//   var x = form.querySelector('input#fname');
+//   if (x.value == "") {
+//     alert("Name must be filled out");
+//     return false;
+//   }
+// }
+// </script>
+// </head>
+// <body>
+//
+// <form id="validform" name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+//   Name: <input type="text" id="fname" name="fname">
+//   <input type="submit" value="Submit">
+// </form>
+//
+// </body>
+// </html>
