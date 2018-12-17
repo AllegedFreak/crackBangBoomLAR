@@ -3,14 +3,16 @@
 @section('content')
     <div class="container">
         <h3>Comics
-            <a href="/comics/create" class="btn btn-primary">Cargar Nuevo Comic</a>
+            <a href="/comics/create" class="btn btn-primary"> Nuevo Comic</a>
         </h3>
 
         <div class="row card-columns">
                 <div class="col-10 ">
                 @forelse ($comics as $comic)
                     <div class="card" style="width: 18rem;">
-                      <img class="card-img-top" src="/storage/comics/{{ $comic->img_cover }}" alt="Card image cap">
+                      <a href="/comics/{{ $comic->id }}">
+                        <img class="card-img-top" src="/storage/comics/{{ $comic->img_cover }}" alt="Card image cap">
+                      </a>
                       <div class="card-body">
                         <h5 class="card-title">{{ $comic->title }}</h5>
                         <p class="card-text">{{ $comic->description }}</p>

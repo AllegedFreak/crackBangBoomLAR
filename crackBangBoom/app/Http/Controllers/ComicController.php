@@ -82,18 +82,25 @@ class ComicController extends Controller
           $comic->universes()->attach($_POST['universe']);
         //}
 
+        return redirect('/comics');
 
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Comic  $comic
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Comic $comic)
+    public function show($id)
     {
-        //
+      $comic = \App\Comic::find($id);
+
+          return view('comics.show',
+          [
+            'comic' => $comic,
+          ]);
+
     }
 
     /**

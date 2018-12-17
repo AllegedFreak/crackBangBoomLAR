@@ -17,6 +17,16 @@
   border: 1px solid #999;
 }
 
+.img-show-cover img{
+  width: 280px;
+  height: 400px;
+  margin: 20px;
+  border-radius: 10px;
+  border: 1px solid #999;
+  align-content: center;
+
+}
+
 .name-user h1{
   text-align: center;
   color: #E52328;
@@ -28,6 +38,13 @@
 .email-user {
   text-align: center;
   color: #333333;
+}
+
+.precio {
+  text-align: center;
+  font-size: 24px;
+  color: #333333;
+  margin: 20px;
 }
 
 .user-actions {
@@ -106,6 +123,14 @@
   }
   .column-B {
     width: 75%;
+  }
+
+  .column-I {
+    width: 30%;
+    margin-right: 30px;
+  }
+  .column-II {
+    width: 70%;
   }
 
 }
