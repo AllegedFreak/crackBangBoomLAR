@@ -24,13 +24,13 @@ class NuestrosUsuarios extends Migration
         // $table->timestamps();
 
         $table->increments('id');
-        $table->string('fullname', 200);
-        $table->string('username', 25)->unique();
+        $table->string('name', 25)->unique();
         $table->string('email', 191)->unique();
         $table->string('img_avatar', 50)->nullable();
         $table->string('password', 200);
-        $table->string('country_birth', 50);
-        $table->date('date_birth');
+        $table->string('remember_token', 100)->nullable();
+        $table->string('country_birth', 50)->nullable();
+        $table->date('date_birth')->nullable();
         $table->boolean('admin')->default(0);
 
         $table->timestamps(); //no borrar

@@ -25,7 +25,7 @@
                     </div>
                 @empty
                     <div class="alert alert-danger" role="alert">
-                      No hay productos registrados
+                      No Hay Comics Registrados
                     </div>
                 @endforelse
 
