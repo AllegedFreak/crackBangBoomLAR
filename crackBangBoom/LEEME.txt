@@ -1,0 +1,19 @@
+¿QUE DEBO HACER ANTES DE CORRER EL SITIO UNA VEZ CLONADO?
+
+1) Dentro del repositorio ir a crackBangBoomLAR/crackBangBoom/ en la terminal
+
+2) ejecutar: composer install
+
+3) ejecutar: php artisan key:generate
+
+4) editar el archivo .env para la base de datos: newcbb con tu usuario y contraseña.
+
+5) crear un schema con nombre "newcbb" en tu mysql.
+
+6) verificar que corra el servidor ejecutando: php artisan serve
+
+7) de tener problemas borrar manualmente la carpeta VENDOR y ejecutar nuevamente: composer install
+
+8) migrar las bases de datos ejecutando: php artisan migrate
+
+9) linkear la carpeta storage ejecutando: php artisan storage:link

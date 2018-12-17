@@ -54,12 +54,16 @@ class ComicController extends Controller
         ]);
 
         if( ($request->file('img_cover')) ){
-          $path_cover = $request->file('img_cover')->store('comics/covers');
+          $path_cover = $request->file('img_cover')->store('public/comics/covers');
         }
 
         if( ($request->file('pdf')) ){
-          $path_pdf = $request->file('pdf')->store('comics/pdfs');
+          $path_pdf = $request->file('pdf')->store('public/comics/pdfs');
         }
+
+        $path_cover = substr($path_cover, 13);
+        $path_pdf = substr($path_pdf, 13);
+
 
         $comic = Comic::create([
           'title' => $request->input('title'),
