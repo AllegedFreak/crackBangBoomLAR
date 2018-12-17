@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.main')
 
 @section('content')
 <div class="container">
@@ -43,11 +43,11 @@
                             <label for="" class="col-md-4 col-form-label text-md-right">Universo</label>
 
                             <div class="col-md-6">
+                              <select name="universe">
                                 @foreach ($universes as $universe)
-                                    <input id="{{$universe->id}}"  type="checkbox" name="universes[]" value="{{$universe->id}}">
-                                    <label for="{{$universe->id}}">{{$universe->universe}}</label>
+                                    <option id="{{$universe->id}}"  name="universes" value="{{$universe->id}}">{{$universe->universe}}</option>
                                 @endforeach
-
+                              </select>
                                 @if ($errors->has('universes'))
                                         <strong>{{ $errors->first('universes') }}</strong>
                                 @endif

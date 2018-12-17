@@ -29,6 +29,7 @@ Route::prefix('/comics')->group( function () {
     // Route::get('crear', 'ComicController@create');
     Route::get('/create', 'ComicController@create');
     Route::post('/create', 'ComicController@store');
+    Route::get('/', 'ComicController@index');
 
     // Route::get('editar', 'ComicController@edit');
     Route::get('/editar', function () {
@@ -40,9 +41,9 @@ Route::prefix('/comics')->group( function () {
         return 'Soy Eliminar <a href="/">Inicio</a>';
     });
 
-    Route::get('/', function () {
-        return 'Soy Comics <a href="/">Inicio</a>';
-    });
+    // Route::get('/', function () {
+    //     return 'Soy Comics <a href="/">Inicio</a>';
+    // });
 
 });
 

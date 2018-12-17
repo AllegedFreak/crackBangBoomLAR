@@ -43,36 +43,42 @@ class ComicController extends Controller
         $this->validate( $request, [
           'title' => 'required|string',
           'illustrator' => 'nullable|string',
-          'universes'=> 'nullable|required'??1,
+          'universes'=> 'string',
           'description'=> 'nullable|string',
-          'img_cover'=> 'nullable|image',
+          'img_cover'=> 'image',
           'pdf' => 'nullable',
-          'rating' => 'nullable|numeric',
-          'edition' => 'nullable|string',
-          'price' => 'nullable|numeric',
-          'release_date' => 'nullable',
+          'rating' => 'numeric|min:0|max:10',
+          'edition' => 'string',
+          'price' => 'numeric|min:0',
+          'release_date' => 'string',
         ]);
 
         if( ($request->file('img_cover')) ){
-          $path = $request->file('img_cover')->store('comics');
+          $path_cover = $request->file('img_cover')->store('comics/covers');
+        }
+
+        if( ($request->file('pdf')) ){
+          $path_pdf = $request->file('pdf')->store('comics/pdfs');
         }
 
         $comic = Comic::create([
           'title' => $request->input('title'),
           'illustrator' => $request->input('illustrator'),
           'description'=> $request->input('description'),
-          'img_cover'=> $path??null,
-          'pdf' => $path??null,
+          'img_cover'=> $path_cover,
+          'pdf' => $path_pdf,
           'rating' => $request->input('rating'),
           'edition' => $request->input('edition'),
-          'price' => $request->input('price')??0,
+          'price' => $request->input('price'),
           'release_date' => $request->input('release_date'),
           //'user_id' => \Auth::user()->id,
         ]);
 
-        foreach ($request->input('universes') as $universe) {
-          $comic->universes()->attach($universe);
-        }
+        //foreach ($request->input('universes') as $universe) {
+          $comic->universes()->attach($_POST['universe']);
+        //}
+
+
     }
 
     /**
