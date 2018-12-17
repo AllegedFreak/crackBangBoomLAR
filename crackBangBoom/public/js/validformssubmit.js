@@ -2,7 +2,8 @@ function validateForm() {
 
   console.log('validateForm inició');
 
-  var inputName = form.querySelector('input#name');
+  //var inputName = form.querySelector('input#name');
+  var inputName = document.forms["validform"]["name"].value;
   if ( inputName != null ) {
     var textErrorName = document.querySelector('span.name');
     inputName.onblur = function(){
@@ -36,7 +37,8 @@ function validateForm() {
   }
 
 
-  var inputEmail = form.querySelector('input#email');
+  //var inputEmail = form.querySelector('input#email');
+  var inputEmail = document.forms["validform"]["email"].value;
   if ( inputEmail != null ) {
     var textErrorEmail = document.querySelector('span.email');
     inputEmail.onblur = function(){
@@ -64,7 +66,8 @@ function validateForm() {
 
   //var validPassword = false;
 
-  var inputPass = form.querySelector('input#password');
+  //var inputPass = form.querySelector('input#password');
+  var inputPass = document.forms["validform"]["password"].value;
   if ( inputPass != null ) {
     var textErrorPass = document.querySelector('span.password');
     inputPass.onblur = function(){
@@ -98,7 +101,8 @@ function validateForm() {
   };
 
 
-  var inputPassConf = form.querySelector('input#password-confirm');
+  //var inputPassConf = form.querySelector('input#password-confirm');
+  var inputPassConf = document.forms["validform"]["password_confirmation"].value;
   if ( inputPassConf != null ) {
     var textErrorPassConf = document.querySelector('span.passconf');
     inputPassConf.onblur = function(){
