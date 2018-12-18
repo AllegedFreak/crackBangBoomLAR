@@ -20,12 +20,10 @@
               ${{ $comic->price }}
             </div>
             <div class="col-12 user-actions">
-              @if (Auth::check()) {
-                  loggeado!
+              @if (Auth::check()) @if (Auth::user()->admin == TRUE)
+               <a href="/comics/{{$comic->id}}/editar">Editar</a>
               @endif
-
-              <a href="#">Editar Info</a>
-
+              @endif
             </div>
 
           </div>

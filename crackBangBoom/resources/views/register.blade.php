@@ -13,7 +13,7 @@
                           @csrf
 
                           <div class="form-group row">
-                              <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+                              <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Nombre Completo') }}</label>
 
                               <div class="col-md-6">
                                   <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}"   autofocus>
@@ -29,7 +29,7 @@
                           </div>
 
                           <div class="form-group row">
-                              <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+                              <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail') }}</label>
 
                               <div class="col-md-6">
                                   <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}"  >
@@ -45,7 +45,7 @@
                           </div>
 
                           <div class="form-group row">
-                              <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+                              <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Contraseña') }}</label>
 
                               <div class="col-md-6">
                                   <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password"  >
@@ -61,7 +61,7 @@
                           </div>
 
                           <div class="form-group row">
-                              <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+                              <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirmar Contraseña') }}</label>
 
                               <div class="col-md-6">
                                   <input id="password-confirm" type="password" class="form-control" name="password_confirmation"  >
@@ -70,6 +70,16 @@
 
                               </div>
                           </div>
+                          <!-- @if (Auth::check()) @if (Auth::user()->admin == TRUE)
+                          <div class="form-group row">
+                              <label for="admin" class="col-md-4 col-form-label text-md-right">{{ __('¿Es Administrador?') }}</label>
+
+                              <div class="col-md-1">
+                                  <input id=1 type="checkbox" name="admin" value=1>
+                              </div>
+                          </div>
+                          @endif
+                          @endif -->
 
                           <div class="form-group row mb-0">
                               <div class="col-md-6 offset-md-4">
