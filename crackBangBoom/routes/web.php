@@ -30,16 +30,16 @@ Route::prefix('/comics')->group( function () {
     Route::get('/', 'ComicController@index');
     Route::get('/create', 'ComicController@create');
     Route::post('/create', 'ComicController@store');
-    Route::get('/{id}', 'ComicController@show');
 
-    // Route::get('editar', 'ComicController@edit');
-    Route::get('/editar', function () {
-        return 'Soy Editar <a href="/">Inicio</a>';
-    });
+
 
     // Route::get('eliminar', 'ComicController@delete');
     Route::get('/eliminar', function () {
         return 'Soy Eliminar <a href="/">Inicio</a>';
+    });
+    Route::get('/{id}', 'ComicController@show');
+    Route::get('/{id}/editar', function () {
+        return 'Soy Editar <a href="/">Inicio</a>';
     });
 
     // Route::get('/', function () {
