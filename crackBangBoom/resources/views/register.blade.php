@@ -96,7 +96,7 @@
   </div>
 </div>
 
-<!-- <script src="/js/validformsontime.js"></script>  //on time -->
+<script src="/js/validformsontime.js"></script>  //on time
 <script src="/js/validformssubmit.js"></script>  //para submit
 
 
