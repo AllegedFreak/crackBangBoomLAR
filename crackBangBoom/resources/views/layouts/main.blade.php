@@ -1,17 +1,3 @@
-<?php
-
-  // if ( !isset( $_COOKIE["theme"] ) ) {
-  //   $cookie_name = "theme";
-  //   $cookie_value = "light";
-  //   setcookie($cookie_name, $cookie_value, 0, "/");
-  // } else {
-  //   $cookie_name = "theme";
-  //   $cookie_value = $_COOKIE["theme"];
-  //   setcookie($cookie_name, $cookie_value, 0, "/");
-  // }
-
-?>
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -27,7 +13,9 @@
 
     <link rel="stylesheet" href="/css/banner-style.css">
     <link rel="stylesheet" href="/css/profile-style.css">
-    <link rel="stylesheet" href="/css/items-style-profile.css">
+
+    <link rel="stylesheet" href="/css/items-style-profile.css" class="just-for-profile">
+
     <link rel="stylesheet" href="/css/contact-style.css">
     <link rel="stylesheet" href="/css/faq-style.css">
     <!-- <link rel="stylesheet" href="/css/item-style-profile.css"> -->
@@ -53,6 +41,14 @@
 
       @include('includes.changetheme')
 
+      <script>
+
+        //deshabilita items-style-profile.css
+        var checkProfileCSS = document.styleSheets[6];
+        //console.log(checkProfileCSS);
+        checkProfileCSS.disabled = true;
+
+      </script>
 
   </body>
 

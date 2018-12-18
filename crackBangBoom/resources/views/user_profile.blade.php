@@ -69,4 +69,14 @@
   </div>
 
 </div>
+
+<script>
+
+  //vuelve a habilitar items-style-profile.css
+  var checkProfileCSS = document.styleSheets[6];
+  //console.log(checkProfileCSS);
+  checkProfileCSS.disabled = true;
+
+</script>
+
 @endsection
