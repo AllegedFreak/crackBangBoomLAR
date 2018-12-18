@@ -25,8 +25,14 @@
           <li><a href="/sobre-nosotros">Sobre Nosotros</a></li>
           <li><a href="/preguntas-frecuentes">FAQs</a></li>
           <li><a href="/contacto">Contacto</a></li>
-          <li><a href="/usuario/logueo">Ingresar</a></li>
+          @if (Auth::check())
           <li><a href="/usuario/perfil">Mi Perfil</a></li>
+          <li><a href="/usuario/deslogueo">Logout</a></li>
+          @else
+          <li><a href="/usuario/logueo">Ingresar</a></li>
+          <li><a href="/usuario/registro">Registrarme</a></li>@endif
+
+
         </ul>
     </nav>
 

@@ -63,6 +63,10 @@ Route::prefix('/usuario')->name('usuario.')->group( function() {
         return view('user_profile');
         // return 'Soy Perfil';
     });
+    Route::get('/deslogueo', function () {
+      Auth::logout();
+      return view('login');
+    }  );
 
 });
 
@@ -94,6 +98,6 @@ Route::get('/sobre-nosotros',  function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'IndexController@cargarIndex')->name('home');
 
 Route::get('/', 'IndexController@cargarIndex');

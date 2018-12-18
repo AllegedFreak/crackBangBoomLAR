@@ -23,6 +23,8 @@ class Universos extends Migration
           [ 'universe'=>'Marvel'],
           [ 'universe'=>'DC'],
           [ 'universe'=>'Manga'],
+          [ 'universe'=>'Asterix'],
+          [ 'universe'=>'Tintin'],
           [ 'universe'=>'Otro'],
         ]);
 
