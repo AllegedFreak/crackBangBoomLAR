@@ -9,7 +9,7 @@
                   <div class="card-header">{{ __('Register') }}</div>
 
                   <div class="card-body">
-                      <form method="POST" name="validform" id="validform" action="{{ route('register') }}" onsubmit="return validateForm()">
+                      <form method="POST" name="validform" id="validform" action="{{ route('register') }}" onsubmit="return validateForm()" >
                           @csrf
 
                           <div class="form-group row">
@@ -83,7 +83,7 @@
 
                           <div class="form-group row mb-0">
                               <div class="col-md-6 offset-md-4">
-                                  <button type="submit" class="btn btn-primary" onsubmit="return validateForm()" >
+                                  <button type="submit" class="btn btn-primary" >
                                       {{ __('Register') }}
                                   </button>
                               </div>

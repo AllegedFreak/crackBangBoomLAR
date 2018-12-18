@@ -14,7 +14,6 @@ function validateForm() {
         inputName.classList.add('is-invalid');
         textErrorName.innerText = "Este campo es requerido.";
         textErrorName.style.display = "block";
-        alert("Safsdfjdss fdjkf dmnn jk");
         return false;
 
       } else if ( input.length < 3 ) {
@@ -273,7 +272,7 @@ function validateForm() {
 // });
 
 
-//THIS WORKS:
+//THIS WORKS: https://www.w3schools.com/js/tryit.asp?filename=tryjs_validation_js
 //
 // <!DOCTYPE html>
 // <html>
