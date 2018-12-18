@@ -12,7 +12,7 @@
   </div>
 
   <div class="bottom-menu col-12">
-    <a href="/sobre-nosotros">Sobre nosotros</a> | <a href="/preguntas-frecuentes">FAQs</a> | <a href="/contacto">Contacto</a> | @if (Auth::check()) <a href="/usuario/deslogueo">Logout</a> |@endif <a href="/usuario/logueo">Ingresar</a>
+    <a href="/sobre-nosotros">Sobre nosotros</a> | <a href="/preguntas-frecuentes">FAQs</a> | <a href="/contacto">Contacto</a> | @if (Auth::check()) <a href="/usuario/deslogueo">Logout</a>@if (Auth::user()->admin == TRUE) | <a href="/usuario/registro">Registrar Admin</a>@endif @else <a href="/usuario/logueo">Ingresar</a>@endif
   </div>
 
   <div class="signature col-12">
