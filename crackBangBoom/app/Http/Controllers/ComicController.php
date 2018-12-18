@@ -106,12 +106,19 @@ class ComicController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Comic  $comic
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Comic $comic)
+    public function edit($id)
     {
-        //
+        $comic = \App\Comic::find($id);
+        $universes = \App\Universe::all();
+
+        return view('comics.edit',
+        [
+          'comic' => $comic,
+          'universes' => $universes,
+        ]);
     }
 
     /**

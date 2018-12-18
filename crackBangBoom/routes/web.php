@@ -38,10 +38,8 @@ Route::prefix('/comics')->group( function () {
         return 'Soy Eliminar <a href="/">Inicio</a>';
     });
     Route::get('/{id}', 'ComicController@show');
-    Route::get('/{id}/editar', function () {
-        return 'Soy Editar <a href="/">Inicio</a>';
-    });
-
+    Route::get('/{id}/editar', 'ComicController@edit');
+    
     // Route::get('/', function () {
     //     return 'Soy Comics <a href="/">Inicio</a>';
     // });
