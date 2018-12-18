@@ -8,7 +8,7 @@
   <div class="container-fluid ">
     <div class="row banner">
       <div class="col-12 no-padding">
-        @yield('script-banner')
+        @include('includes.banner')
       </div>
     </div>
   </div>

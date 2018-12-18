@@ -1,32 +1,30 @@
-@section('script-banner')
-
 <div class="fullbanner">
 
   <!-- IMAGES -->
 
   <div class="image">
     <img src="/images/banner2/1.jpg" alt="">
-    <div class="text">Texto N°1</div>
+    <div class="text">IronMan</div>
   </div>
 
   <div class="image">
     <img src="/images/banner2/2.jpg" alt="">
-    <div class="text">Texto N°2</div>
+    <div class="text">Spiderman</div>
   </div>
 
   <div class="image">
     <img src="/images/banner2/3.jpg" alt="">
-    <div class="text">Texto N°3</div>
+    <div class="text">Superman</div>
   </div>
 
   <div class="image">
     <img src="images/banner2/4.jpg" alt="">
-    <div class="text">Texto N°4</div>
+    <div class="text">Deadpool</div>
   </div>
 
   <div class="image">
     <img src="/images/banner2/5.jpg" alt="">
-    <div class="text">Texto N°5</div>
+    <div class="text">Flash</div>
   </div>
 
   <!-- BOTONES -->
@@ -123,7 +121,7 @@
 
 </script>
 
-@stop
+
 
 <!-- <div class="row content">
 
