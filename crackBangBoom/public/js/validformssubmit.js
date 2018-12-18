@@ -9,6 +9,17 @@ function validateForm() {
   if ( inputName != null ) {
     var textErrorName = document.querySelector('span.name');
     var input = inputName.value.trim();
+
+    function evaluar(string) {
+      for ( char of string.split("") ) {
+        console.log(char);
+        if ( char.match( /^-?\d*$/ ) || char.match( /[^a-z\d]+/i ) ) {
+          return false;
+          break;
+        }
+      }
+    }
+
     if (input == '') {
       event.preventDefault();
       inputName.classList.add('is-invalid');
@@ -16,23 +27,24 @@ function validateForm() {
       textErrorName.style.display = "block";
       return false;
 
-    } else if ( input.length < 3 ) {
+    } else if ( input.length < 6 ) {
       event.preventDefault();
       inputName.classList.add('is-invalid');
-      textErrorName.innerText = "Este campo debe tener al menos 3 caracteres.";
+      textErrorName.innerText = "Este campo debe tener al menos 6 caracteres.";
       textErrorName.style.display = "block";
       return false;
 
-    } else if ( input.match( /^-?\d*$/ ) ) {
+    } else if ( evaluar(input) == false ) {
       event.preventDefault();
       inputName.classList.add('is-invalid');
-      textErrorName.innerText = "Este campo no admite números.";
+      textErrorName.innerText = "Este campo no admite números ni caracteres especiales.";
       textErrorName.style.display = "block";
       return false;
     }
     else {
       inputName.classList.remove('is-invalid');
       textErrorName.style.display = "none";
+      return true;
     }
   };
 
@@ -73,10 +85,10 @@ function validateForm() {
       textErrorPass.innerText = "Este campo es requerido.";
       textErrorPass.style.display = "block";
       return false;
-    } else if ( input.length < 3 ) {
+    } else if ( input.length < 6 ) {
       event.preventDefault();
       inputPass.classList.add('is-invalid');
-      textErrorPass.innerText = "Este campo debe tener al menos 3 caracteres.";
+      textErrorPass.innerText = "Este campo debe tener al menos 6 caracteres.";
       textErrorPass.style.display = "block";
       return false;
     }
@@ -99,10 +111,10 @@ function validateForm() {
       textErrorPassConf.innerText = "Este campo es requerido.";
       textErrorPassConf.style.display = "block";
       return false;
-    } else if ( input.length < 3 ) {
+    } else if ( input.length < 6 ) {
       event.preventDefault();
       inputPassConf.classList.add('is-invalid');
-      textErrorPassConf.innerText = "Este campo debe tener al menos 3 caracteres.";
+      textErrorPassConf.innerText = "Este campo debe tener al menos 6 caracteres.";
       textErrorPassConf.style.display = "block";
       return false;
     } else if ( input != preinput ) {

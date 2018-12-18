@@ -4,6 +4,17 @@ var form = document.querySelector('#validform');
 var inputName = form.querySelector('input#name');
 if ( inputName != null ) {
   var textErrorName = document.querySelector('span.name');
+
+  function evaluar(string) {
+    for ( char of string.split("") ) {
+      console.log(char);
+      if ( char.match( /^-?\d*$/ ) || char.match( /[^a-z\d]+/i ) ) {
+        return false;
+        break;
+      }
+    }
+  }
+
   inputName.onblur = function(){
     var input = inputName.value.trim();
     if (input == '') {
@@ -11,20 +22,21 @@ if ( inputName != null ) {
       textErrorName.innerText = "Este campo es requerido.";
       textErrorName.style.display = "block";
       // event.preventDefault();
-    } else if ( input.length < 3 ) {
+    } else if ( input.length < 6 ) {
       inputName.classList.add('is-invalid');
-      textErrorName.innerText = "Este campo debe tener al menos 3 caracteres.";
+      textErrorName.innerText = "Este campo debe tener al menos 6 caracteres.";
       textErrorName.style.display = "block";
       // event.preventDefault();
-    } else if ( input.match( /^-?\d*$/ ) ) {
+    } else if ( evaluar(input) == false ) {
       inputName.classList.add('is-invalid');
-      textErrorName.innerText = "Este campo no admite números.";
+      textErrorName.innerText = "Este campo no admite números ni caracteres especiales.";
       textErrorName.style.display = "block";
       // event.preventDefault();
     }
     else {
       inputName.classList.remove('is-invalid');
       textErrorName.style.display = "none";
+      return true;
       // event.preventDefault();
     };
   };
@@ -68,9 +80,9 @@ if ( inputPass != null ) {
       //var validPassword = false;
       //console.log('false'.validPassword);
       // event.preventDefault();
-    } else if ( input.length < 3 ) {
+    } else if ( input.length < 6 ) {
       inputPass.classList.add('is-invalid');
-      textErrorPass.innerText = "Este campo debe tener al menos 3 caracteres.";
+      textErrorPass.innerText = "Este campo debe tener al menos 6 caracteres.";
       textErrorPass.style.display = "block";
       //var validPassword = false;
       //console.log('false'.validPassword);
@@ -102,9 +114,9 @@ if ( inputPassConf != null ) {
       textErrorPassConf.innerText = "Este campo es requerido.";
       textErrorPassConf.style.display = "block";
       // event.preventDefault();
-    } else if ( input.length < 3 ) {
+    } else if ( input.length < 6 ) {
       inputPassConf.classList.add('is-invalid');
-      textErrorPassConf.innerText = "Este campo debe tener al menos 3 caracteres.";
+      textErrorPassConf.innerText = "Este campo debe tener al menos 6 caracteres.";
       textErrorPassConf.style.display = "block";
       // event.preventDefault();
     } else if ( input != preinput ) {
