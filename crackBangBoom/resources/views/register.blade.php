@@ -9,7 +9,7 @@
                   <div class="card-header">{{ __('Register') }}</div>
 
                   <div class="card-body">
-                      <form method="POST" name="validform" id="validform" action="{{ route('register') }}">
+                      <form method="POST" name="validform" id="validform" action="{{ route('register') }}" onsubmit="return validateForm()">
                           @csrf
 
                           <div class="form-group row">
