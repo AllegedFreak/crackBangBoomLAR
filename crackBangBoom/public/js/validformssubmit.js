@@ -11,18 +11,21 @@ function validateForm() {
     inputName.onblur = function(){
       var input = inputName.value.trim();
       if (input == '') {
+        event.preventDefault();
         inputName.classList.add('is-invalid');
         textErrorName.innerText = "Este campo es requerido.";
         textErrorName.style.display = "block";
         return false;
 
       } else if ( input.length < 3 ) {
+        event.preventDefault();
         inputName.classList.add('is-invalid');
         textErrorName.innerText = "Este campo debe tener al menos 3 caracteres.";
         textErrorName.style.display = "block";
         return false;
 
       } else if ( input.match( /^-?\d*$/ ) ) {
+        event.preventDefault();
         inputName.classList.add('is-invalid');
         textErrorName.innerText = "Este campo no admite números.";
         textErrorName.style.display = "block";
@@ -44,12 +47,14 @@ function validateForm() {
     var textErrorEmail = document.querySelector('span.email');
     inputEmail.onblur = function(){
       if (inputEmail.value.trim() == '') {
+        event.preventDefault();
         inputEmail.classList.add('is-invalid');
         textErrorEmail.innerText = "Este campo es requerido.";
         textErrorEmail.style.display = "block";
         return false;
 
       } else if ( !(inputEmail.value.match( /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/ )) ) {
+        event.preventDefault();
         inputEmail.classList.add('is-invalid');
         textErrorEmail.innerText = "Este email es invalido.";
         textErrorEmail.style.display = "block";
@@ -71,13 +76,14 @@ function validateForm() {
     inputPass.onblur = function(){
       var input = inputPass.value.trim();
       if (input == '') {
+        event.preventDefault();
         inputPass.classList.add('is-invalid');
         textErrorPass.innerText = "Este campo es requerido.";
         textErrorPass.style.display = "block";
-
         return false;
 
       } else if ( input.length < 3 ) {
+        event.preventDefault();
         inputPass.classList.add('is-invalid');
         textErrorPass.innerText = "Este campo debe tener al menos 3 caracteres.";
         textErrorPass.style.display = "block";
@@ -101,18 +107,21 @@ function validateForm() {
       var input = inputPassConf.value.trim();
       var preinput = form.querySelector('input#password').value.trim();
       if (input == '') {
+        event.preventDefault();
         inputPassConf.classList.add('is-invalid');
         textErrorPassConf.innerText = "Este campo es requerido.";
         textErrorPassConf.style.display = "block";
         return false;
 
       } else if ( input.length < 3 ) {
+        event.preventDefault();
         inputPassConf.classList.add('is-invalid');
         textErrorPassConf.innerText = "Este campo debe tener al menos 3 caracteres.";
         textErrorPassConf.style.display = "block";
         return false;
 
       } else if ( input != preinput ) {
+          event.preventDefault();
           inputPassConf.classList.add('is-invalid');
           inputPass.classList.add('is-invalid');
           textErrorPassConf.innerText = "Las contraseñas no coinciden.";
