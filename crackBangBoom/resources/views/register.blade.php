@@ -48,7 +48,7 @@
                               <label for="birth" class="col-md-4 col-form-label text-md-right">{{ __('Fecha de Nacimiento') }}</label>
 
                               <div class="col-md-6">
-                                
+
                                   <input id="date-bith" type="date" name="date-bith">
 
                                   <span class="invalid-feedback date-bith" role="alert"></span>
@@ -60,15 +60,15 @@
                               <label for="location" class="col-md-4 col-form-label text-md-right">{{ __('Lugar de Nacimiento') }}</label>
 
                               <div class="col-md-6">
-                                  <!-- <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password"  > -->
+
                                   <select id="country_birth" name="country_birth" onchange="verifCountry()">
-                                    <option value="null">  *Seleccionar País*  </option>
+                                    <option value="">  *País*  </option>
                                   </select>
 
                                   <span class="invalid-feedback country_birth" role="alert"></span>
 
                                   <select id="provincias-list" style="display:none;" name="">
-                                    <option value="null">  *Seleccionar Provincia*  </option>
+                                    <option value="">  *Provincia*  </option>
                                   </select>
 
                               </div>

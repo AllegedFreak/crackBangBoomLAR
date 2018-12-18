@@ -4,7 +4,7 @@ fetch('https://restcountries.eu/rest/v2/all')
   })
   .then (function(response) {
     //console.log(response);
-    var select = document.querySelector('#country-list');
+    var select = document.querySelector('#country_birth');
     //console.log(select);
     for (var i = 0; i < response.length; i++) {
 

@@ -1,9 +1,22 @@
 function verifCountry() {
   //esto lo q va a hacer es verificar si el pais seleccionado es argentina
-  var selectedCountry = document.querySelector('#country-list').value;
+  var selectedCountry = document.querySelector('#country_birth').value;
   //console.log(selectedCountry);
   if (selectedCountry == 'AR') {
-    console.log('ARGENTINA!');
+
+    //console.log('');
+
+    var styles = [
+    'background-color: white'
+    , 'color: lightblue'
+    , 'display: block'
+    , 'text-align: center'
+    , 'font-weight: bold'
+    , 'font-style: italic' 
+    ].join(';');
+
+    console.log('%c Sean eternos los laureles que supimos conseguir, coronados de gloria vivamos, o juremos con gloria morir.', styles);
+
     var select = document.querySelector('#provincias-list');
     select.setAttribute("style", "display:block;" );
   } else if (selectedCountry != 'AR') {

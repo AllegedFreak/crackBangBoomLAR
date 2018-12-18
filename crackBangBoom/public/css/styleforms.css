@@ -35,7 +35,7 @@ body {
 }
 
 /* Cada Caja del Formulario */
-input[type="text"], input[type="email"], input[type="password"], input[type="file"], select {
+input[type="text"], input[type="email"], input[type="password"], input[type="file"], input[type="date"], select {
     width: 100%;
     padding: 12px 20px;
     margin: 5px 0;
