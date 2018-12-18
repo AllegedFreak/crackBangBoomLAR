@@ -13,15 +13,25 @@
             </div>
 
             <!--Info Personal del user-->
-            <div class="col-12 name-user">
+            <div class="col-12 name-comic">
               <h1>{{ $comic->title }}</h1>
             </div>
-            <div class="col-12 precio">
+            <div class="col-12 illustrator">
+              por {{ $comic->illustrator }}
+            </div>
+
+            <div class="col-11 release_date">
+              {{ $comic->release_date }}
+            </div>
+
+            <div class="col-11 precio">
               ${{ $comic->price }}
             </div>
-            <div class="col-12 user-actions">
+
+            <div class="col-12 comic-actions">
               @if (Auth::check()) @if (Auth::user()->admin == TRUE)
                <a href="/comics/{{$comic->id}}/editar">Editar</a>
+               <a href="/comics/{{$comic->id}}/borrar">Borrar</a>
               @endif
               @endif
             </div>
@@ -31,17 +41,21 @@
         </div>
 
         <div class="column-II">
-
+          @if (Auth::check()) @if (Auth::user()->admin == TRUE)
+          <embed src="/storage/comics/{{ $comic->pdf }}" type="application/pdf" width="100%" height="700px" />
+            @endif
+            @endif
           <!--Info del user en la WEB-->
-          <div class="row containter info-purchase">
 
-            <div class="info-bought">
-              <a href="#">
-                <h3>Mis Compras</h3>
-              </a>
-              <div class="allitems">
-
+          <div class="form-group row mb-7">
+              <div class="col-md-6 offset-md-4">
+                  <button type="submit" class="btn btn-primary">
+                      Comprar
+                  </button>
               </div>
-            </div>
+          </div>
+
+
+
 
 @endsection

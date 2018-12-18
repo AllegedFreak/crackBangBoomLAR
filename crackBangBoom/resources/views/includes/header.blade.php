@@ -22,6 +22,7 @@
     <!-- ***** nav ***** -->
     <nav class="navigation">
       <ul class="navigation-ul">
+          <li><a href="/comics">Comics</a></li>
           <li><a href="/sobre-nosotros">Sobre Nosotros</a></li>
           <li><a href="/preguntas-frecuentes">FAQs</a></li>
           <li><a href="/contacto">Contacto</a></li>

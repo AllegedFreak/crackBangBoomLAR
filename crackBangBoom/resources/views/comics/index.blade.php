@@ -3,7 +3,6 @@
 @section('content')
     <div class="container">
         <h3>Comics
-            <a href="/comics/create" class="btn btn-primary"> Nuevo Comic</a>
         </h3>
 
         <div class="row card-columns">
@@ -13,15 +12,6 @@
                       <a href="/comics/{{ $comic->id }}">
                         <img class="card-img-top" src="/storage/comics/{{ $comic->img_cover }}" alt="Card image cap">
                       </a>
-                      <div class="card-body">
-                        <h5 class="card-title">{{ $comic->title }}</h5>
-                        <p class="card-text">{{ $comic->description }}</p>
-                        <p class="card-text">Ilustrado por: {{ $comic->illustrator }}</p>
-                        <p class="card-text">Rating: {{ $comic->rating }}</p>
-                        <p class="card-text">Edición: {{ $comic->edition }}</p>
-                        <p class="card-text">${{ $comic->price }}</p>
-                        <a href="#" class="btn btn-primary">Ver Más</a>
-                      </div>
                     </div>
                 @empty
                     <div class="alert alert-danger" role="alert">
@@ -29,8 +19,10 @@
                     </div>
                 @endforelse
 
-
-
+                @if (Auth::check()) @if (Auth::user()->admin == TRUE)
+                <a href="/comics/create" class="btn btn-primary"> Nuevo Comic</a>
+                @endif
+                @endif
               </div>
         </div>
     </div>

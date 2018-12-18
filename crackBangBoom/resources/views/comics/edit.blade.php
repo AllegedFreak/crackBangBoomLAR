@@ -5,11 +5,12 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Editar {{$comic->name}}</div>
+                <div class="card-header">Editar </div>
 
                 <div class="card-body">
-                    <form method="PUT" action="/comics/create" enctype="multipart/form-data">
+                    <form method="POST" action="/comics/{{$comic->id}}" enctype="multipart/form-data">
                             @csrf
+                            
 
                         <div class="form-group row">
                             <label for="title" class="col-md-4 col-form-label text-md-right">Título</label>
@@ -43,7 +44,7 @@
                             <label for="" class="col-md-4 col-form-label text-md-right">Universo</label>
 
                             <div class="col-md-6">
-                              <select name="universe" value="{{ $universe->universe }}">
+                              <select name="universe">
                                 @foreach ($universes as $universe)
                                     <option id="{{$universe->id}}"  name="universes" value="{{$universe->id}}">{{$universe->universe}}</option>
                                 @endforeach
@@ -59,7 +60,7 @@
 
                             <div class="col-md-6">
 
-                                <textarea name="description" id="description" class="form-control{{ $errors->has('description') ? ' is-invalid' : '' }}">{{ old('description')}}</textarea>
+                                <textarea name="description" id="description" class="form-control{{ $errors->has('description') ? ' is-invalid' : '' }}">{{ $comic->description }}</textarea>
 
                                 @if ($errors->has('description'))
                                     <span class="invalid-feedback" role="alert">
@@ -101,7 +102,7 @@
                             <label for="rating" class="col-md-4 col-form-label text-md-right">Rating</label>
 
                             <div class="col-md-6">
-                                <input id="rating" type="number" class="form-control{{ $errors->has('rating') ? ' is-invalid' : '' }}" name="rating" value="{{ old('rating') }}" min="0" step="1">
+                                <input id="rating" type="number" class="form-control{{ $errors->has('rating') ? ' is-invalid' : '' }}" name="rating" value="{{ $comic->rating }}" min="0" step="1">
 
                                 @if ($errors->has('rating'))
                                     <span class="invalid-feedback" role="alert">
@@ -115,7 +116,7 @@
                             <label for="edition" class="col-md-4 col-form-label text-md-right">Edición</label>
 
                             <div class="col-md-6">
-                                <input id="edition" type="text" class="form-control{{ $errors->has('edition') ? ' is-invalid' : '' }}" name="edition" value="{{ old('edition') }}" min="0" step="1" autofocus>
+                                <input id="edition" type="text" class="form-control{{ $errors->has('edition') ? ' is-invalid' : '' }}" name="edition" value="{{ $comic-> edition }}" min="0" step="1" autofocus>
 
                                 @if ($errors->has('edition'))
                                     <span class="invalid-feedback" role="alert">
@@ -129,7 +130,7 @@
                             <label for="price" class="col-md-4 col-form-label text-md-right">Precio</label>
 
                             <div class="col-md-6">
-                                <input id="price" type="number" class="form-control{{ $errors->has('price') ? ' is-invalid' : '' }}" name="price" value="{{ old('price') }}" min="0" step="1">
+                                <input id="price" type="number" class="form-control{{ $errors->has('price') ? ' is-invalid' : '' }}" name="price" value="{{ $comic->price }}" min="0" step="1">
 
                                 @if ($errors->has('price'))
                                     <span class="invalid-feedback" role="alert">
@@ -144,7 +145,7 @@
 
                             <div class="col-md-6">
 
-                                <input name="release_date" id="release_date" type="date" class="form-control{{ $errors->has('release_date') ? ' is-invalid' : '' }}">{{ old('description')}}</textarea>
+                                <input name="release_date" id="release_date" type="date" class="form-control{{ $errors->has('release_date') ? ' is-invalid' : '' }}" value="{{ $comic->release_date }}"></textarea>
 
                                 @if ($errors->has('release_date'))
                                     <span class="invalid-feedback" role="alert">

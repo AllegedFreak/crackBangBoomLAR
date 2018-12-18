@@ -39,7 +39,9 @@ Route::prefix('/comics')->group( function () {
     });
     Route::get('/{id}', 'ComicController@show');
     Route::get('/{id}/editar', 'ComicController@edit');
-    
+    Route::post('/{id}', 'ComicController@update');
+    Route::get('/{id}/borrar', 'ComicController@destroy');
+
     // Route::get('/', function () {
     //     return 'Soy Comics <a href="/">Inicio</a>';
     // });

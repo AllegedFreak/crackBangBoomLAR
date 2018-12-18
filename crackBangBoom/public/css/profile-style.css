@@ -44,8 +44,33 @@
   text-align: center;
   font-size: 24px;
   color: #333333;
-  margin: 20px;
+  margin: 12px;
+  font-weight: bold;
 }
+
+.name-comic h1{
+  text-align: center;
+  color: #E52328;
+  font-size: 32px;
+  letter-spacing: 1px;
+  margin: 15px;
+}
+
+.illustrator {
+  text-align: center;
+  color: #333333;
+  font-size: 24px;
+  font-style: italic;
+}
+
+.release_date {
+  text-align: center;
+  color: #333333;
+  font-size: 20px;
+  margin: 10px;
+}
+
+
 
 .user-actions {
   width: 100%;
@@ -54,11 +79,32 @@
   margin: 5px 0 20px 0;
 }
 
+.comic-actions {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 5px 0 20px 0;
+
+}
+
 .user-actions a {
   padding: 0px 10px;
   margin: 0 2px 0 2px;
   border: 1px solid #999;
   border-radius: 5px;
+}
+
+.comic-actions a {
+  padding: 0px 10px;
+  margin: 0 2px 0 2px;
+  border: 1px solid #999;
+  border-radius: 5px;
+  background-color:#FFD700;
+  color:#696969;
+}
+
+.downfooter {
+  vertical-align: sub;
 }
 
 .info-purchase{

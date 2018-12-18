@@ -144,7 +144,7 @@
 
                             <div class="col-md-6">
 
-                                <input name="release_date" id="release_date" type="date" class="form-control{{ $errors->has('release_date') ? ' is-invalid' : '' }}">{{ old('description')}}</textarea>
+                                <input name="release_date" id="release_date" type="date" class="form-control{{ $errors->has('release_date') ? ' is-invalid' : '' }}"></textarea>
 
                                 @if ($errors->has('release_date'))
                                     <span class="invalid-feedback" role="alert">
