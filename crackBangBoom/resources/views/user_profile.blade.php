@@ -70,12 +70,13 @@
 
 </div>
 
+<
 <script>
 
-  //vuelve a habilitar items-style-profile.css
-  var checkProfileCSS = document.styleSheets[6];
+  //deshabilita items-style-profile.css
+  var checkProfileCSS = document.querySelector('.just-for-profile');
   //console.log(checkProfileCSS);
-  checkProfileCSS.disabled = true;
+  checkProfileCSS.disabled = false;
 
 </script>
 
