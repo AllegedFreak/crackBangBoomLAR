@@ -1,6 +1,6 @@
 function validateForm() {
 
-  console.log('validateForm inició');
+  //console.log('validateForm inició');
 
   var form = document.querySelector('#validform');
 
