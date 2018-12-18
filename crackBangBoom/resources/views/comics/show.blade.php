@@ -8,9 +8,11 @@
           <div class="row info-personal">
 
             <!--Imagen del user-->
+          
             <div class="img-show-cover">
               <img src="/storage/comics/{{ $comic->img_cover }}" alt="">
             </div>
+
 
             <!--Info Personal del user-->
             <div class="col-12 name-comic">

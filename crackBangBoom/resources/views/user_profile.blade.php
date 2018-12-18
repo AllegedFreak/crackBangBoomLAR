@@ -73,7 +73,7 @@
 <
 <script>
 
-  //deshabilita items-style-profile.css
+  //habilita items-style-profile.css
   var checkProfileCSS = document.querySelector('.just-for-profile');
   //console.log(checkProfileCSS);
   checkProfileCSS.disabled = false;
