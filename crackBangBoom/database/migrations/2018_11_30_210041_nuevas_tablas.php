@@ -70,7 +70,6 @@ class NuevasTablas extends Migration
      public function down()
      {
          Schema::drop('comics');
-         Schema::drop('genres');
          Schema::drop('authors');
          Schema::drop('characters');
          Schema::drop('comic_universe');

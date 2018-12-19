@@ -55,6 +55,8 @@ class RegisterController extends Controller
             'admin' => ['nullable'],
             'date-birth' => ['required', 'date', 'string'],
             'country_birth' => ['nullable'],
+            'img_avatar' => ['nullable'],
+            'pcia_ar' => ['nullable'],
 
 
 
@@ -76,6 +78,7 @@ class RegisterController extends Controller
             'admin' => $data['admin']??0,
             'date_birth' => $data['date-birth'],
             'country_birth' => $data['country_birth'],
+            'pcia_ar' => $data['pcia_ar'],
         ]);
     }
 }
