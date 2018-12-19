@@ -24,7 +24,7 @@ class NuestrosUsuarios extends Migration
         // $table->timestamps();
 
         $table->increments('id');
-        $table->string('name', 25)->unique();
+        $table->string('name', 25);
         $table->string('email', 191)->unique();
         $table->string('img_avatar', 50)->nullable();
         $table->string('password', 200);

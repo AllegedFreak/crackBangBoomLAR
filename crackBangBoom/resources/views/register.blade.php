@@ -49,7 +49,7 @@
 
                               <div class="col-md-6">
 
-                                  <input id="date-bith" type="date" name="date-bith">
+                                  <input id="date-birth" type="date" name="date-birth">
 
                                   <span class="invalid-feedback date-bith" role="alert"></span>
 
