@@ -12,7 +12,8 @@ function validateForm() {
 
     function evaluar(string) {
       for ( char of string.split("") ) {
-        console.log(char);
+        if (char === " ") { continue; }
+        //console.log(char);
         if ( char.match( /^-?\d*$/ ) || char.match( /[^a-z\d]+/i ) ) {
           return false;
           break;
