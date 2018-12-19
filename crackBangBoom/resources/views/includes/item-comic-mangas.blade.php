@@ -1,31 +1,31 @@
 {{-- @include('comics') --}}
 
-@php
-foreach ($mangas as $manga) {
-@endphp
+@foreach ($comics->take(4) as $comic)
+
 
 <div class="item">
 
-  <a href="show-item.php?seccion=mangas&id=@php echo $manga['id']; @endphp">
-    @php //echo $manga['id']; @endphp
+  <a href="/comics/{{ $comic->id }}">
+
+
 <!-- ***** Portada Comic ***** -->
     <div class="cover">
-      <img src="@php echo $manga['cover']; @endphp" alt="">
+      <img src="/storage/comics{{ $comic->img_cover }}" alt="">
       <!-- <img src="" alt="oferta"> -->
     </div>
 <!-- ***** Info Comic ***** -->
     <div class="info">
         <div class="title">
-          <p>@php echo $manga['title']; @endphp</p>
+          <p>{{ $comic->title }}</p>
         </div>
         <div class="edition">
-          <p>@php echo $manga['edition']; @endphp1</p>
+          <p>{{ $comic->edition }}</p>
         </div>
         <div class="price">
-          <p>@php echo $manga['price']; @endphp</p>
+          <p>$ {{  $comic->price }}</p>
         </div>
     </div>
   </a>
 </div>
 
-@php } @endphp
+@endforeach

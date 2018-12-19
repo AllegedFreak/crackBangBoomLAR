@@ -31,7 +31,9 @@
           <li><a href="/usuario/deslogueo">Logout</a></li>
           @else
           <li><a href="/usuario/logueo">Ingresar</a></li>
-          <li><a href="/usuario/registro">Registrarme</a></li>@endif
+          <li><a href="/usuario/registro">Registrarme</a></li>
+          @endif
+          <li><a href=""><i class="fas fa-shopping-cart"></i></a></li>
 
 
         </ul>

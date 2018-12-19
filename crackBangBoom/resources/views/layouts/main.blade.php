@@ -6,6 +6,8 @@
     <meta charset="utf-8">
     <title>Crack Bang Boom!</title>
     <link href="/css/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!-- link iconos -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="/css/main-style.css">
