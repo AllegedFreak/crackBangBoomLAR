@@ -8,9 +8,9 @@
           <div class="row info-personal">
 
             <!--Imagen del user-->
-          
+
             <div class="img-show-cover">
-              <img src="/storage/comics/{{ $comic->img_cover }}" alt="">
+              <img src="/storage/comics{{ $comic->img_cover }}" alt="">
             </div>
 
 
@@ -44,7 +44,7 @@
 
         <div class="column-II">
           @if (Auth::check()) @if (Auth::user()->admin == TRUE)
-          <embed src="/storage/comics/{{ $comic->pdf }}" type="application/pdf" width="100%" height="700px" />
+          <embed src="/storage/comics{{ $comic->pdf }}" type="application/pdf" width="100%" height="700px" />
             @endif
             @endif
           <!--Info del user en la WEB-->

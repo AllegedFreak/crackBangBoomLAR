@@ -18,7 +18,7 @@
                     <div class="col-4 item">
                         <div class="cover">
                       <a href="/comics/{{ $comic->id }}">
-                        <img class="card-img-top" src="/storage/comics/{{ $comic->img_cover }}" alt="Card image cap">
+                        <img class="card-img-top" src="/storage/comics{{ $comic->img_cover }}" alt="Card image cap">
                       </a>
                         </div>
                     </div> {{-- fin item --}}
