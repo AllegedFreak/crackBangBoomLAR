@@ -24,6 +24,31 @@
 
             //HAY QUE SUMAR ->middleware('auth')
 //Route::prefix('/comics')->middleware('auth')->group( function () {
+
+Route::get('/home', 'IndexController@cargarIndex')->name('home');
+
+Route::get('/', 'IndexController@cargarIndex');
+
+// Agregar Carrito ------------------------------------------------
+Route::get('/add-to-cart/{id}', [
+  'uses'=>'ProductController@getAddToCart',
+  'as'=>'product.addToCart']);
+//---------------------------------------------------------------
+
+//---------------------------BORRAR carrito (1uni)----------
+Route::get('/reduce/{id}', [
+    'uses'=>'ProductController@getReduceByOne',
+    'as'=>'product.reduceByOne'
+  ]);
+//----------------------------------------------------------
+
+
+// View Carrito ------------------------------------------------
+Route::get('/shopping-cart', [
+  'uses'=>'ProductController@getCart',
+  'as'=>'product.shoppingCart']);
+//---------------------------------------------------------------
+
 Route::prefix('/comics')->group( function () {
 
     // Route::get('crear', 'ComicController@create');
@@ -97,7 +122,3 @@ Route::get('/sobre-nosotros',  function () {
 
 
 Auth::routes();
-
-Route::get('/home', 'IndexController@cargarIndex')->name('home');
-
-Route::get('/', 'IndexController@cargarIndex');

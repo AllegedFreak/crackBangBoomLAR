@@ -51,9 +51,11 @@
 
           <div class="form-group row mb-7">
               <div class="col-md-6 offset-md-4">
+                <a href="{{route('product.addToCart' , ['id'=>$comic->id]) }}">
                   <button type="submit" class="btn btn-primary">
                       Agregar al Carrito
                   </button>
+                </a>
               </div>
           </div>
 

@@ -33,7 +33,11 @@
           <li><a href="/usuario/logueo">Ingresar</a></li>
           <li><a href="/usuario/registro">Registrarme</a></li>
           @endif
-          <li><a href=""><i class="fas fa-shopping-cart"></i></a></li>
+
+
+          <li><a href="{{route('product.shoppingCart')}}"><i class="fas fa-shopping-cart"></i></a></li>
+          <!--- Nro carrito -->
+          <span class="cart-qty">{{ Session::has('cart') ? Session::get('cart')->totalQty : ''}}</span>
 
 
         </ul>
