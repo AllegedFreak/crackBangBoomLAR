@@ -2,3 +2,5 @@
 crackBangBoom/\.env
 
 crackBangBoom/vendor/
+
+crackBangBoom/public/storage
