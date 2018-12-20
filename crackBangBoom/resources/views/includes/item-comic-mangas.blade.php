@@ -1,6 +1,6 @@
 {{-- @include('comics') --}}
 
-@foreach ($comics->take(4) as $comic)
+@foreach ($comics->random(4) as $comic)
 
 
 <div class="item">
