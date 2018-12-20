@@ -40,7 +40,9 @@
             <h3>Mis Compras</h3>
           </a>
           <div class="allitems">
-            <!-- (arroba)include('includes.item-comic-bought') -->
+
+            @include('includes.item-comic-profile')
+
           </div>
         </div>
 
@@ -49,7 +51,9 @@
             <h3>Leídas recientemente</h3>
           </a>
           <div class="allitems readhistory">
-            <!-- (arroba)include('includes.item-comic-history') -->
+
+            @include('includes.item-comic-profile')
+
           </div>
         </div>
 

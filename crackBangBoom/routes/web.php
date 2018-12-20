@@ -25,6 +25,7 @@
             //HAY QUE SUMAR ->middleware('auth')
 //Route::prefix('/comics')->middleware('auth')->group( function () {
 
+
 Route::get('/home', 'IndexController@cargarIndex')->name('home');
 
 Route::get('/', 'IndexController@cargarIndex');
@@ -84,10 +85,8 @@ Route::prefix('/usuario')->name('usuario.')->group( function() {
         return view('login');
     });
 
-    Route::get('/perfil', function () {
-        return view('user_profile');
-        // return 'Soy Perfil';
-    });
+    Route::get('/perfil', 'ProfileController@cargar');
+
     Route::get('/deslogueo', function () {
       Auth::logout();
       return view('login');
