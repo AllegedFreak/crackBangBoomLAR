@@ -109,10 +109,14 @@ class ComicController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
+
+     
     public function edit($id)
     {
         $comic = \App\Comic::find($id);
         $universes = \App\Universe::all();
+
+        //return view( 'comics.edit', compact('comic', '$universes') );
 
         return view('comics.edit',
         [
@@ -128,8 +132,11 @@ class ComicController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+
     public function update(Request $request, $id)
     {
+      // validate
       $this->validate( $request, [
         'title' => 'required|string',
         'illustrator' => 'nullable|string',
@@ -144,7 +151,7 @@ class ComicController extends Controller
       ]);
 
       if( ($request->file('img_cover')) ){
-        $path_cover = $request->file('img_cover')->store('public/comics/covers');
+        $path_cover = $request->flie('img_cover')->store('public/comics/covers');
       }
 
       if( ($request->file('pdf')) ){
@@ -153,31 +160,45 @@ class ComicController extends Controller
 
       if(isset($path_cover)) {
         $path_cover = substr($path_cover, 13);
-      } else $path_cover = null;
+      } else {
+        $path_cover = null;
+      }
 
       if(isset($path_pdf)) {
         $path_pdf = substr($path_pdf, 13);
-      }else $path_pdf = null;
+      } else {
+        $path_pdf = null;
+      }
 
-
+      // save
       $comic = Comic::find($id);
-        $comic->title = $_POST['title'];
-        $comic->illustrator = $_POST['illustrator'];
-        $comic->description = $_POST['description'];
+        $comic->title = $request['title'];
+        $comic->illustrator = $request['illustrator'];
+        $comic->description = $request['description'];
         $comic->img_cover = $path_cover;
         $comic->pdf = $path_pdf;
-        $comic->rating = $_POST['rating'];
-        $comic->edition = $_POST['edition'];
-        $comic->price = $_POST['price'];
-        $comic->release_date = $_POST['release_date'];
-        //'user_id' => \Auth::user()->id,
+        $comic->rating = $request['rating'];
+        $comic->edition = $request['edition'];
+        $comic->price = $request['price'];
+        $comic->release_date = $request['release_date'];
+        $comic->save;
 
+        // $comic->title = $request->get('title');
+        // $comic->illustrator = $request->get('illustrator');
+        // $comic->description = $$request->get('description');
+        // $comic->img_cover = $path_cover;
+        // $comic->pdf = $path_pdf;
+        // $comic->rating = $request->get('rating');
+        // $comic->edition = $request->get('edition');
+        // $comic->price = $request->get('price');
+        // $comic->release_date = $request->get('release_date');
+        // $comic->save();
 
-      //foreach ($request->input('universes') as $universe) {
         $comic->universes()->attach($_POST['universe']);
-      //}
 
-      return redirect('/comics');
+      // redirect
+      return redirect('comics');
+
     }
 
     /**

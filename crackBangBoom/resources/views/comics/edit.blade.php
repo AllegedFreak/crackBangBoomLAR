@@ -7,12 +7,27 @@
             <div class="card">
                 <div class="card-header">Editar </div>
 
+                @if(count($errors) > 0)
+                  <div class="alert alert-success">
+                    <ul>
+                      @foreach($errors->all() as $error)
+                      <li> {{ $error }} </li>
+                      @endforeach
+                    </ul>
+                  </div>
+                @endif
+
                 <div class="card-body">
-                    <form method="POST" action="/comics/{{$comic->id}}" enctype="multipart/form-data">
-                            @csrf
-                            
+
+                    <form method="POST" action="/comics/{{ $comic->id }}" enctype="multipart/form-data">
+
+                        @csrf
+
 
                         <div class="form-group row">
+
+                            <input type="hidden" name="_method" value="PATCH">
+
                             <label for="title" class="col-md-4 col-form-label text-md-right">Título</label>
 
                             <div class="col-md-6">
@@ -158,7 +173,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-primary" value="Edit">
                                     Guardar
                                 </button>
                             </div>

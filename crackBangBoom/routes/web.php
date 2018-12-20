@@ -22,7 +22,7 @@
 //     return view('contact');
 // });
 
-            //HAY QUE SUMAR ->middleware('auth')
+
 //Route::prefix('/comics')->middleware('auth')->group( function () {
 
 
@@ -58,13 +58,16 @@ Route::prefix('/comics')->middleware('auth')->group( function () {
     Route::post('/create', 'ComicController@store');
 
 
-
     // Route::get('eliminar', 'ComicController@delete');
     Route::get('/eliminar', function () {
         return 'Soy Eliminar <a href="/">Inicio</a>';
     });
+
     Route::get('/{id}', 'ComicController@show');
-    Route::get('/{id}/editar', 'ComicController@edit');
+
+    Route::get('/{id}/editar', 'ComicController@edit'); //Formulario de Edicion // EL NAME ES PARA laravel colective
+    Route::post('/{id}', 'ComicController@update'); //Formulario Actualizar
+
     Route::post('/{id}', 'ComicController@update');
     Route::get('/{id}/borrar', 'ComicController@destroy');
 
