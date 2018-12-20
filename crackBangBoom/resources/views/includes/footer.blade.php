@@ -4,10 +4,10 @@
 
   <div class="socialmedia col-12">
     <ul>
-      <li><a href="#"><span class="ion-social-facebook"></span></a></li>
-      <li><a href="#"><span class="ion-social-twitter"></span></a></li>
-      <li><a href="#"><span class="ion-social-instagram"></span></a></li>
-      <li><a href="#"><span class="ion-social-pinterest"></span></a></li>
+      <li><a href="http://www.facebook.com"><span class="ion-social-facebook"></span></a></li>
+      <li><a href="http://www.twitter.com"><span class="ion-social-twitter"></span></a></li>
+      <li><a href="http://www.instagram.com"><span class="ion-social-instagram"></span></a></li>
+      <li><a href="http://www.pinterest.com"><span class="ion-social-pinterest"></span></a></li>
     </ul>
   </div>
 

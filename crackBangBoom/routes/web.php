@@ -49,7 +49,7 @@ Route::get('/shopping-cart', [
   'as'=>'product.shoppingCart']);
 //---------------------------------------------------------------
 
-Route::prefix('/comics')->group( function () {
+Route::prefix('/comics')->middleware('auth')->group( function () {
 
     // Route::get('crear', 'ComicController@create');
     Route::get('/', 'ComicController@index');
@@ -106,13 +106,13 @@ Route::get('login/google/callback', 'Auth\LoginController@handleProviderCallback
 
 
 Route::get('/contacto', function () {
-    // return view('contact');
-    return 'Soy Contacto <a href="/">Inicio</a>';
+    return view('contact');
+    //return 'Soy Contacto <a href="/">Inicio</a>';
 });
 
 Route::get('/preguntas-frecuentes', function () {
-    // return view('faq');
-    return 'Soy FAQ <a href="/">Inicio</a>';
+    return view('faq');
+    //return 'Soy FAQ <a href="/">Inicio</a>';
 });
 
 Route::get('/sobre-nosotros',  function () {

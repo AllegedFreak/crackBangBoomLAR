@@ -148,7 +148,7 @@
   height: auto;
   margin-bottom: 0px;
   padding: 5px 0;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .check-box {
