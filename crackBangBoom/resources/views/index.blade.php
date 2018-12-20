@@ -34,7 +34,7 @@
     <!--Sección de Géneros-->
     <div class="row blue section">
       <div class="name-section col-12">
-        <h1>Manga</h1>
+        <h1>Lo más popular</h1>
       </div>
       <div class="comic-section col-12">
         <div class="allitems">
