@@ -63,22 +63,22 @@ class ComicController extends Controller
         $path_pdf = $request->file('pdf')->store('public/comics/pdfs');
       }
 
-      // $path_cover = substr($path_cover, 13);
-      // $path_pdf = substr($path_pdf, 13);
+      $path_cover = substr($path_cover, 13);
+      $path_pdf = substr($path_pdf, 13);
 
-      if(isset($path_cover)) {
-        $path_cover = substr($path_cover, 13);
-      } else {
-        $comic = Comic::find($id);
-        $path_cover = $comic["img_cover"];
-      }
-
-      if(isset($path_pdf)) {
-        $path_pdf = substr($path_pdf, 13);
-      } else {
-        $comic = Comic::find($id);
-        $path_pdf = $comic["pdf"];
-      }
+      // if(isset($path_cover)) {
+      //   $path_cover = substr($path_cover, 13);
+      // } else {
+      //   //$comic = Comic::find($id);
+      //   $path_cover = null;
+      // }
+      //
+      // if(isset($path_pdf)) {
+      //   $path_pdf = substr($path_pdf, 13);
+      // } else {
+      //   //$comic = Comic::find($id);
+      //   $path_pdf = null;
+      // }
 
       $comic = Comic::create([
           'title' => $request->get('title'),
@@ -283,4 +283,5 @@ class ComicController extends Controller
 
       return redirect('/comics');
     }
+
 }

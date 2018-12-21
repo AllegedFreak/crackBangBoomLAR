@@ -11,6 +11,5 @@ class Comic extends Model
   public function universes()
   {
       return $this->belongsToMany(Universe::class);
-
   }
 }

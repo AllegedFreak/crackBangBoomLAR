@@ -60,6 +60,7 @@
 
                             <div class="col-md-6">
                               <select name="universe">
+                                <option value="">  *Universo*  </option>
                                 @foreach ($universes as $universe)
                                     <option id="{{$universe->id}}"  name="universes" value="{{$universe->id}}">{{$universe->universe}}</option>
                                 @endforeach
