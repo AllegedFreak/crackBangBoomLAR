@@ -27,7 +27,7 @@
 
 Route::get('/home', 'IndexController@cargarIndex')->name('home');
 
-<<<<<<< HEAD
+
 Route::get('/', 'IndexController@cargarIndex');
 
 
@@ -38,27 +38,10 @@ Route::get('/add-to-cart/{id}', [
   'as'=>'product.addToCart']);
 
 //Borrar uno
-=======
-// Agregar Carrito ------------------------------------------------
-
-Route::get('/add-to-cart/{id}', [
-  'uses'=>'ProductController@getAddToCart',
-  'as'=>'product.addToCart']);
-
-//---------------------------------------------------------------
-
-//---------------------------BORRAR carrito (1uni)----------
-
->>>>>>> f8eedf55775d9914598f545c4368de7ece676fee
 Route::get('/reduce/{id}', [
     'uses'=>'ProductController@getReduceByOne',
     'as'=>'product.reduceByOne'
   ]);
-<<<<<<< HEAD
-=======
-
-//----------------------------------------------------------
->>>>>>> f8eedf55775d9914598f545c4368de7ece676fee
 
 //Borrar Item
 Route::get('/remove/{id}', [
@@ -66,20 +49,10 @@ Route::get('/remove/{id}', [
     'as'=>'product.remove'
   ]);
 
-<<<<<<< HEAD
 // View Carrito
 Route::get('/shopping-cart', [
   'uses'=>'ProductController@getCart',
   'as'=>'product.shoppingCart']);
-=======
-// View Carrito ------------------------------------------------
-
-Route::get('/shopping-cart', [
-  'uses'=>'ProductController@getCart',
-  'as'=>'product.shoppingCart']);
-
-//---------------------------------------------------------------
->>>>>>> f8eedf55775d9914598f545c4368de7ece676fee
 
 //View Compra
 Route::get('/checkout', [
@@ -92,6 +65,7 @@ Route::get('/checkout', [
     'uses'=>'ProductController@postCheckOut',
     'as'=>'checkout',
     'middleware'=>'auth']);
+
 //---------------------------------------------------------------
 Route::prefix('/comics')->middleware('auth')->group( function () {
 
