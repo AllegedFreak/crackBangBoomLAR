@@ -19,7 +19,7 @@
 
                 <div class="card-body">
 
-                    <form method="POST" action="/comics/{{ $comic->id }}" enctype="multipart/form-data">
+                    <form method="post" action="/comics/{{ $comic->id }}" enctype="multipart/form-data">
 
                         @csrf
 

@@ -28,48 +28,46 @@
 
 Route::get('/home', 'IndexController@cargarIndex')->name('home');
 
-Route::get('/', 'IndexController@cargarIndex');
-
 // Agregar Carrito ------------------------------------------------
+
 Route::get('/add-to-cart/{id}', [
   'uses'=>'ProductController@getAddToCart',
   'as'=>'product.addToCart']);
+
 //---------------------------------------------------------------
 
 //---------------------------BORRAR carrito (1uni)----------
+
 Route::get('/reduce/{id}', [
     'uses'=>'ProductController@getReduceByOne',
     'as'=>'product.reduceByOne'
   ]);
+
 //----------------------------------------------------------
 
 
 // View Carrito ------------------------------------------------
+
 Route::get('/shopping-cart', [
   'uses'=>'ProductController@getCart',
   'as'=>'product.shoppingCart']);
+
 //---------------------------------------------------------------
 
 Route::prefix('/comics')->middleware('auth')->group( function () {
 
-    // Route::get('crear', 'ComicController@create');
-    Route::get('/', 'ComicController@index');
     Route::get('/create', 'ComicController@create');
     Route::post('/create', 'ComicController@store');
 
-
-    // Route::get('eliminar', 'ComicController@delete');
-    Route::get('/eliminar', function () {
-        return 'Soy Eliminar <a href="/">Inicio</a>';
-    });
+    Route::get('/{id}/editar', 'ComicController@edit'); //Formulario de Edicion // EL NAME ES PARA laravel colective
+    Route::patch('/{id}', 'ComicController@update'); //Formulario Actualizar
 
     Route::get('/{id}', 'ComicController@show');
 
-    Route::get('/{id}/editar', 'ComicController@edit'); //Formulario de Edicion // EL NAME ES PARA laravel colective
-    Route::post('/{id}', 'ComicController@update'); //Formulario Actualizar
-
-    Route::post('/{id}', 'ComicController@update');
     Route::get('/{id}/borrar', 'ComicController@destroy');
+    Route::post('/{id}', 'ComicController@update');
+
+    Route::get('/', 'ComicController@index');
 
     // Route::get('/', function () {
     //     return 'Soy Comics <a href="/">Inicio</a>';
@@ -122,5 +120,6 @@ Route::get('/sobre-nosotros',  function () {
     //return 'Soy Sobre Nosotros <a href="/">Inicio</a>';
 });
 
+Route::get('/', 'IndexController@cargarIndex');
 
 Auth::routes();

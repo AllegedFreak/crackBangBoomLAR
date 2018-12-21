@@ -110,7 +110,7 @@ class ComicController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-     
+
     public function edit($id)
     {
         $comic = \App\Comic::find($id);
@@ -136,68 +136,59 @@ class ComicController extends Controller
 
     public function update(Request $request, $id)
     {
-      // validate
-      $this->validate( $request, [
-        'title' => 'required|string',
-        'illustrator' => 'nullable|string',
-        'universes'=> 'string',
-        'description'=> 'nullable|string',
-        'img_cover'=> 'image',
-        'pdf' => 'nullable',
-        'rating' => 'numeric|min:0|max:10',
-        'edition' => 'string',
-        'price' => 'numeric|min:0',
-        'release_date' => 'string',
-      ]);
+        // validate
+        $this->validate( $request, [
+          'title' => 'required|string',
+          'illustrator' => 'nullable|string',
+          'universes'=> 'string',
+          'description'=> 'nullable|string',
+          'img_cover'=> 'image',
+          'pdf' => 'nullable',
+          'rating' => 'numeric|min:0|max:10',
+          'edition' => 'string',
+          'price' => 'numeric|min:0',
+          'release_date' => 'string',
+        ]);
 
-      if( ($request->file('img_cover')) ){
-        $path_cover = $request->flie('img_cover')->store('public/comics/covers');
-      }
+        if( ($request->file('img_cover')) ){
+          $path_cover = $request->file('img_cover')->store('public/comics/covers');
+        }
 
-      if( ($request->file('pdf')) ){
-        $path_pdf = $request->file('pdf')->store('public/comics/pdfs');
-      }
+        if( ($request->file('pdf')) ){
+          $path_pdf = $request->file('pdf')->store('public/comics/pdfs');
+        }
 
-      if(isset($path_cover)) {
-        $path_cover = substr($path_cover, 13);
-      } else {
-        $path_cover = null;
-      }
+        if(isset($path_cover)) {
+          $path_cover = substr($path_cover, 13);
+        } else {
+          $comic = Comic::find($id);
+          $path_cover = $comic->img_cover;
+        }
 
-      if(isset($path_pdf)) {
-        $path_pdf = substr($path_pdf, 13);
-      } else {
-        $path_pdf = null;
-      }
+        if(isset($path_pdf)) {
+          $path_pdf = substr($path_pdf, 13);
+        } else {
+          $comic = Comic::find($id);
+          $path_pdf = $comic->pdf;
+        }
 
-      // save
-      $comic = Comic::find($id);
-        $comic->title = $request['title'];
-        $comic->illustrator = $request['illustrator'];
-        $comic->description = $request['description'];
+        $comic = Comic::find($id);
+
+        var_dump($comic);
+
+        $comic->title = $request->get('title');
+        $comic->illustrator = $request->get('illustrator');
+        $comic->description = $request->get('description');
         $comic->img_cover = $path_cover;
         $comic->pdf = $path_pdf;
-        $comic->rating = $request['rating'];
-        $comic->edition = $request['edition'];
-        $comic->price = $request['price'];
-        $comic->release_date = $request['release_date'];
-        $comic->save;
+        $comic->rating = $request->get('rating');
+        $comic->edition = $request->get('edition');
+        $comic->price = $request->get('price');
+        $comic->release_date = $request->get('release_date');
+        $comic->save();
 
-        // $comic->title = $request->get('title');
-        // $comic->illustrator = $request->get('illustrator');
-        // $comic->description = $$request->get('description');
-        // $comic->img_cover = $path_cover;
-        // $comic->pdf = $path_pdf;
-        // $comic->rating = $request->get('rating');
-        // $comic->edition = $request->get('edition');
-        // $comic->price = $request->get('price');
-        // $comic->release_date = $request->get('release_date');
-        // $comic->save();
-
-        $comic->universes()->attach($_POST['universe']);
-
-      // redirect
-      return redirect('comics');
+        // redirect
+        return redirect('comics/'.$comic->id);
 
     }
 
