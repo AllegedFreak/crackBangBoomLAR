@@ -8,6 +8,12 @@
           <h1>Comics</h1>
         </div>
 
+        @if($message = Session::get('success'))
+        <div class="alert alert-success">
+          <p> {{ $message }} </p>
+        </div>
+        @endif
+
         <div class="col-12 comic-section">
 
           <div class="col-12 d-flex justify-content-around" style="">
