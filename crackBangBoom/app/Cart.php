@@ -7,7 +7,7 @@ class Cart
   public $items = null;
   public $totalQty = 0;
   public $totalPrice = 0;
-
+  
   public function __construct($oldCart){
     //si tengo un carrito anterior, lo trae para seguir sumando productos
     if ($oldCart) {
@@ -48,10 +48,21 @@ class Cart
     $this->items[$id]['qty']--;
     $this->items[$id]['price']-=$this->items[$id]['item']['price'];
 
-    //reduce el total del Carrito
+    //reduce la unidad del total del Carrito
     $this->totalQty--;
     $this->totalPrice -= $this->items[$id]['item']['price'];
+
+    if ($this->items[$id]['qty'] <= 0) {
+      unset($this->items[$id]);
+    }
   }
+
+  public function removeItem($id){
+    $this->totalQty -= $this->items[$id]['qty'];
+    $this->totalPrice -= $this->items[$id]['price'];
+    unset($this->items[$id]);
+  }
+
 
 
 

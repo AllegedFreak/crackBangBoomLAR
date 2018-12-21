@@ -23,8 +23,8 @@
     <nav class="navigation">
       <ul class="navigation-ul">
           <li><a href="/comics">Comics</a></li>
-          <!-- <li><a href="/sobre-nosotros">Sobre Nosotros</a></li>
-          <li><a href="/preguntas-frecuentes">FAQs</a></li>
+          <li><a href="/sobre-nosotros">Sobre Nosotros</a></li>
+          <!-- <li><a href="/preguntas-frecuentes">FAQs</a></li>
           <li><a href="/contacto">Contacto</a></li> -->
           @if (Auth::check())
           <li><a href="/usuario/perfil">Mi Perfil</a></li>
@@ -37,7 +37,7 @@
 
           <li><a href="{{route('product.shoppingCart')}}"><i class="fas fa-shopping-cart"></i></a></li>
           <!--- Nro carrito -->
-          <span class="cart-qty">{{ Session::has('cart') ? Session::get('cart')->totalQty : ''}}</span>
+          <span class="badge badge-danger" style="background-color: #42A9E0;">{{ Session::has('cart') ? Session::get('cart')->totalQty : ''}}</span>
 
 
         </ul>

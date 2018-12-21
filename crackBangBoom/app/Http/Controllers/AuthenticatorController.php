@@ -25,12 +25,12 @@ class AuthenticatorController extends Controller
   }
 
   //
-  public function logout(){
-  setcookie('logueado', NULL, time()-1);
+  // public function logout(){
+  // setcookie('logueado', NULL, time()-1);
   // destruyo la cookie donde se guarda la session
-  session_destroy();
+  // session_destroy();
   //lo uso cuando le dan click a logout
-  }
+  // }
 
   public function usuarioLogueado($base){
     if($this->estoyLogueado()){

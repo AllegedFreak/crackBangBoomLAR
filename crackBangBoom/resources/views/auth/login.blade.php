@@ -1,11 +1,18 @@
 @extends('layouts.main')
 
 @section('content')
+<div class="container-fluid contact-principal">
+  <section class="align-content">
+      <section class="content-shop">
+<div class="row justify-content-center">
+  <h1 style="color:#E52328;">Ingresar</h1>
+</div>
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+            <div class="card" style="background-color: transparent; border:none;">
+                <!-- <div class="card-header">{{ __('Loooooogin') }}</div> -->
 
                 <div class="card-body">
                     <form method="POST" id="validform" action="{{ route('login') }}">
@@ -73,6 +80,10 @@
             </div>
         </div>
     </div>
+</div>
+
+</section>
+</section>
 </div>
 
 <script src="/js/validformsontime.js"></script>

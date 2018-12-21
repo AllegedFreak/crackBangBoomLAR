@@ -17,12 +17,16 @@
         <div class="title">
           <p>{{ $comic->title }}</p>
         </div>
-        <div class="edition">
+        <!-- <div class="edition">
           <p>{{ $comic->edition }}</p>
-        </div>
+        </div> -->
         <div class="price">
           <p>$ {{  $comic->price }}</p>
+          <a style="font-size:25px; color:#ffd800;" href="{{route('product.addToCart' , ['id'=>$comic->id]) }}">
+            + <i style="font-size:25px;"class="fas fa-shopping-cart"></i>
+          </a>
         </div>
+
     </div>
   </a>
 </div>

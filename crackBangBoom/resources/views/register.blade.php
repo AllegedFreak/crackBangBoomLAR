@@ -1,12 +1,19 @@
 @extends('layouts.main')
 
 @section('content')
+<div class="container-fluid contact-principal">
+  <section class="align-content">
+      <section class="content-shop">
+<div class="row justify-content-center">
+  <h1 style="color:#E52328;">Registrarme</h1>
+</div>
+
 <div class="container-fluid">
   <div class="container">
       <div class="row justify-content-center">
           <div class="col-md-8">
-              <div class="card">
-                  <div class="card-header">{{ __('Register') }}</div>
+              <div class="card" style="background-color: transparent; border:none;">
+                  <!-- <div class="card-header">{{ __('Register') }}</div> -->
 
                   <div class="card-body">
                       <form method="POST" name="validform" id="validform" action="{{ route('register') }}" onsubmit="return validateForm()" >
@@ -126,6 +133,10 @@
           </div>
       </div>
   </div>
+</div>
+
+</section>
+</section>
 </div>
 
 <script src="/js/validformsontime.js"></script>

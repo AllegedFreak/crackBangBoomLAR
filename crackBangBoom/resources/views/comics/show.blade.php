@@ -15,7 +15,7 @@
 
 
             <!--Info Personal del user-->
-            <div class="col-12 name-comic">
+            <!-- <div class="col-12 name-comic">
               <h1>{{ $comic->title }}</h1>
             </div>
             <div class="col-12 illustrator">
@@ -28,7 +28,7 @@
 
             <div class="col-11 precio">
               ${{ $comic->price }}
-            </div>
+            </div> -->
 
             <div class="col-12 comic-actions">
               @if (Auth::check()) @if (Auth::user()->admin == TRUE)
@@ -48,7 +48,22 @@
             @endif
             @endif
           <!--Info del user en la WEB-->
+          <br><br>
+          <div class="col-12 name-comic">
+            <h1>{{ $comic->title }}</h1>
+          </div>
+          <div class="col-12 illustrator">
+            por {{ $comic->illustrator }}
+          </div>
 
+          <div class="col-11 release_date">
+            {{ $comic->release_date }}
+          </div>
+
+          <div class="col-11 precio">
+            ${{ $comic->price }}
+          </div>
+          <br>
           <div class="form-group row mb-7">
               <div class="col-md-6 offset-md-4">
                 <a href="{{route('product.addToCart' , ['id'=>$comic->id]) }}">

@@ -1,0 +1,48 @@
+/* ---------- carrito ------------ */
+.fas {
+  font-size: 25px;
+}
+
+.list-group-item {
+background-color: transparent;
+}
+
+#delete-btn{
+  width: 100px;
+  height: 28px;
+  padding: 2px;
+}
+
+#shop-btn{
+  width: 200px;
+  height: 50px;
+}
+.content-shop{
+  border-radius: 20px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin: 0 auto;
+
+}
+
+.btn-addToCart{
+  width: 26px;
+  height: 15px;
+  font-size: 10px;
+}
+
+
+
+@media (min-width:1024px) {
+
+  .content-shop {
+		margin: 25px;
+    width: 100%;
+  }
+
+  .align-content {
+    display: flex;
+    justify-content: center;
+  }
+
+}

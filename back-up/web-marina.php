@@ -1,4 +1,5 @@
 <?php
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,50 +22,38 @@
 //     return view('contact');
 // });
 
-            //HAY QUE SUMAR ->middleware('auth')
+
 //Route::prefix('/comics')->middleware('auth')->group( function () {
 
 
 Route::get('/home', 'IndexController@cargarIndex')->name('home');
 
-Route::get('/', 'IndexController@cargarIndex');
+// Agregar Carrito ------------------------------------------------
 
-
-// CARRITO ------------------------------------------------
-// Agregar
 Route::get('/add-to-cart/{id}', [
   'uses'=>'ProductController@getAddToCart',
   'as'=>'product.addToCart']);
 
-//Borrar uno
+//---------------------------------------------------------------
+
+//---------------------------BORRAR carrito (1uni)----------
+
 Route::get('/reduce/{id}', [
     'uses'=>'ProductController@getReduceByOne',
     'as'=>'product.reduceByOne'
   ]);
 
-//Borrar Item
-Route::get('/remove/{id}', [
-    'uses'=>'ProductController@getRemoveItem',
-    'as'=>'product.remove'
-  ]);
+//----------------------------------------------------------
 
-// View Carrito
+
+// View Carrito ------------------------------------------------
+
 Route::get('/shopping-cart', [
   'uses'=>'ProductController@getCart',
   'as'=>'product.shoppingCart']);
 
-//View Compra
-Route::get('/checkout', [
-  'uses'=>'ProductController@getCheckOut',
-  'as'=>'checkout',
-  'middleware'=>'auth']);
-
-//CHECKOUT
-  Route::post('/checkout', [
-    'uses'=>'ProductController@postCheckOut',
-    'as'=>'checkout',
-    'middleware'=>'auth']);
 //---------------------------------------------------------------
+
 Route::prefix('/comics')->middleware('auth')->group( function () {
 
     Route::get('/create', 'ComicController@create');
@@ -99,12 +88,9 @@ Route::prefix('/usuario')->name('usuario.')->group( function() {
 
     Route::get('/perfil', 'ProfileController@cargar');
 
-
-
     Route::get('/deslogueo', function () {
       Auth::logout();
-      Session::flush();
-      return redirect()->route('home');
+      return view('login');
     }  );
 
 });
@@ -134,5 +120,7 @@ Route::get('/sobre-nosotros',  function () {
     //return 'Soy Sobre Nosotros <a href="/">Inicio</a>';
 });
 
+Route::get('/', 'IndexController@cargarIndex');
 
 Auth::routes();
+
