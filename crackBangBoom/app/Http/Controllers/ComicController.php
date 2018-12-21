@@ -162,19 +162,17 @@ class ComicController extends Controller
           $path_cover = substr($path_cover, 13);
         } else {
           $comic = Comic::find($id);
-          $path_cover = $comic->img_cover;
+          $path_cover = $comic["img_cover"];
         }
 
         if(isset($path_pdf)) {
           $path_pdf = substr($path_pdf, 13);
         } else {
           $comic = Comic::find($id);
-          $path_pdf = $comic->pdf;
+          $path_pdf = $comic["pdf"];
         }
 
         $comic = Comic::find($id);
-
-        var_dump($comic);
 
         $comic->title = $request->get('title');
         $comic->illustrator = $request->get('illustrator');
